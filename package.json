@@ -1,0 +1,48 @@
+{
+  "name": "webshows",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname \"${WEBSHOWS__SERVER__HOST:-0.0.0.0}\" --port \"${WEBSHOWS__SERVER__PORT:-37000}\"",
+    "run": "next start --hostname \"${WEBSHOWS__SERVER__HOST:-0.0.0.0}\" --port \"${WEBSHOWS__SERVER__PORT:-37000}\"",
+    "build": "next build",
+    "clean": "rm --recursive --force build/",
+    "update": "ncu --peer --upgrade && npm i --no-audit --no-fund",
+    "generate-api-emishows": "openapi-typescript openapi/emishows.yaml -o src/api/emishows/types.d.ts",
+    "generate-api": "npm run -- generate-api-emishows"
+  },
+  "dependencies": {
+    "@mantine/core": "^7.10.2",
+    "@mantine/dates": "7.10.2",
+    "@mantine/form": "^7.10.2",
+    "@mantine/hooks": "^7.10.2",
+    "@mantine/notifications": "^7.10.2",
+    "@tabler/icons-react": "^3.1.0",
+    "@types/uuid": "^9.0.8",
+    "client-only": "^0.0.1",
+    "dayjs": "^1.11.11",
+    "immer": "^10.0.4",
+    "next": "^14.1.4",
+    "openapi-fetch": "^0.9.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "server-only": "^0.0.1",
+    "uuid": "^9.0.1",
+    "zustand": "^4.5.2"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.1",
+    "@types/react": "^18.2.74",
+    "@types/react-dom": "^18.2.23",
+    "@typescript-eslint/eslint-plugin": "^7.5.0",
+    "@typescript-eslint/parser": "^7.5.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.1.4",
+    "eslint-config-prettier": "^9.1.0",
+    "npm-check-updates": "^16.14.18",
+    "openapi-typescript": "^6.7.6",
+    "postcss": "^8.4.38",
+    "postcss-preset-mantine": "^1.13.0",
+    "postcss-simple-vars": "^7.0.1",
+    "typescript": "^5.4.3"
+  }
+}
