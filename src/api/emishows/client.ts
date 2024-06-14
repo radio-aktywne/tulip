@@ -3,13 +3,13 @@ import "server-only";
 import createClient from "openapi-fetch";
 import type { paths } from "./types";
 
-const scheme = process.env.EMIWEB__EMISHOWS__HTTP__SCHEME || "http";
-const host = process.env.EMIWEB__EMISHOWS__HTTP__HOST || "localhost";
+const scheme = process.env.WEBSHOWS__EMISHOWS__SCHEME || "http";
+const host = process.env.WEBSHOWS__EMISHOWS__HOST || "localhost";
 const port =
-  process.env.EMIWEB__EMISHOWS__HTTP__PORT === undefined
+  process.env.WEBSHOWS__EMISHOWS__PORT === undefined
     ? 35000
-    : process.env.EMIWEB__EMISHOWS__HTTP__PORT;
-const path = (process.env.EMIWEB__EMISHOWS__HTTP__PATH || "")
+    : process.env.WEBSHOWS__EMISHOWS__PORT;
+const path = (process.env.WEBSHOWS__EMISHOWS__PATH || "")
   // Ensure path starts with a slash
   .replace(/^(?!\/)(.*)$/, "/$1")
   // Remove trailing slashes
