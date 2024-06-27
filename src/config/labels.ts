@@ -75,28 +75,25 @@ export const labels = {
       },
     },
     show: {
-      fields: {
-        id: {
-          title: "Identifier",
-          errors: {
-            missing: "Identifier is required",
-            format: "Identifier must be a valid UUID",
+      form: {
+        fields: {
+          title: {
+            title: "Title",
+            errors: {
+              missing: "Title is required",
+            },
+          },
+          description: {
+            title: "Description",
           },
         },
-        title: {
-          title: "Title",
-          errors: {
-            missing: "Title is required",
+        buttons: {
+          save: {
+            label: "Save",
           },
-        },
-        description: {
-          title: "Description",
-          empty: "No description",
-        },
-      },
-      buttons: {
-        delete: {
-          label: "Delete",
+          delete: {
+            label: "Delete",
+          },
         },
       },
       toasts: {
@@ -151,55 +148,53 @@ export const labels = {
       },
     },
     event: {
-      fields: {
-        id: {
-          title: "Identifier",
-          errors: {
-            missing: "Identifier is required",
-            format: "Identifier must be a valid UUID",
+      form: {
+        fields: {
+          type: {
+            title: "Type",
+            options: {
+              live: "Live",
+              replay: "Replay",
+              prerecorded: "Prerecorded",
+            },
+            errors: {
+              missing: "Type is required",
+              invalid: "Type must be live, replay, or prerecorded",
+            },
+          },
+          show: {
+            title: "Show",
+            option: (id: string) => `${id}`,
+            errors: {
+              missing: "Show is required",
+            },
+          },
+          start: {
+            title: "Start",
+            errors: {
+              missing: "Start date and time is required",
+            },
+          },
+          end: {
+            title: "End",
+            errors: {
+              missing: "End date and time is required",
+            },
+          },
+          timezone: {
+            title: "Timezone",
+            errors: {
+              missing: "Timezone is required",
+            },
           },
         },
-        type: {
-          title: "Type",
-          options: {
-            live: "Live",
-            replay: "Replay",
-            prerecorded: "Prerecorded",
+        buttons: {
+          save: {
+            label: "Save",
           },
-          errors: {
-            missing: "Type is required",
-            invalid: "Type must be live, replay, or prerecorded",
+          delete: {
+            label: "Delete",
           },
-        },
-        show: {
-          title: "Show",
-          option: (id: string) => `${id}`,
-          errors: {
-            missing: "Show is required",
-          },
-        },
-        start: {
-          title: "Start",
-          errors: {
-            missing: "Start date and time is required",
-          },
-        },
-        end: {
-          title: "End",
-          errors: {
-            missing: "End date and time is required",
-          },
-        },
-        timezone: {
-          title: "Timezone",
-          errors: {
-            missing: "Timezone is required",
-          },
-        },
-      },
-      buttons: {
-        delete: {
-          label: "Delete",
         },
       },
       toasts: {
