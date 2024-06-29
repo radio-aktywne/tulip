@@ -43,7 +43,7 @@ export function ShowWidget({ show: prefetchedShow }: ShowWidgetProps) {
 
   const handleSave = useCallback(
     async (data: ShowFormData) => {
-      if (!data.title)
+      if (data.title === undefined || data.title === "")
         return {
           title: labels.widgets.show.form.fields.title.errors.missing,
         };

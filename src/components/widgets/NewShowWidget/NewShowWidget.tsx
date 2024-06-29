@@ -30,7 +30,7 @@ export function NewShowWidget({}: NewShowWidgetProps) {
 
   const handleCreate = useCallback(
     async (data: ShowFormData) => {
-      if (!data.title)
+      if (data.title === undefined || data.title === "")
         return {
           title: labels.widgets.newShow.form.fields.title.errors.missing,
         };

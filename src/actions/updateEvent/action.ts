@@ -20,6 +20,25 @@ export async function updateEvent({ id, update }: UpdateEventProps) {
         start: update.start && dayjs.utc(update.start).format(datetimeFormat),
         end: update.end && dayjs.utc(update.end).format(datetimeFormat),
         timezone: update.timezone,
+        recurrence:
+          update.recurrence == null
+            ? update.recurrence
+            : {
+                rule:
+                  update.recurrence.rule == null
+                    ? update.recurrence.rule
+                    : {
+                        frequency: update.recurrence.rule.frequency,
+                        interval: update.recurrence.rule.interval,
+                        count: update.recurrence.rule.count,
+                        until:
+                          update.recurrence.rule.until == null
+                            ? update.recurrence.rule.until
+                            : dayjs
+                                .utc(update.recurrence.rule.until)
+                                .format(datetimeFormat),
+                      },
+              },
       },
     });
 
