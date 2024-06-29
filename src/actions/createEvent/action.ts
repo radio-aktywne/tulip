@@ -16,6 +16,7 @@ export async function createEvent({
   start,
   end,
   timezone,
+  recurrence,
 }: CreateEventProps) {
   try {
     const { data, error } = await emishows.POST("/events", {
@@ -26,6 +27,25 @@ export async function createEvent({
         start: dayjs.utc(start).format(datetimeFormat),
         end: dayjs.utc(end).format(datetimeFormat),
         timezone,
+        recurrence:
+          recurrence == null
+            ? recurrence
+            : {
+                rule:
+                  recurrence.rule == null
+                    ? recurrence.rule
+                    : {
+                        frequency: recurrence.rule.frequency,
+                        interval: recurrence.rule.interval,
+                        count: recurrence.rule.count,
+                        until:
+                          recurrence.rule.until == null
+                            ? recurrence.rule.until
+                            : dayjs
+                                .utc(recurrence.rule.until)
+                                .format(datetimeFormat),
+                      },
+              },
       },
     });
 

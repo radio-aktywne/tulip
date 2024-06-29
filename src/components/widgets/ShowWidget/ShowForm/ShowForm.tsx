@@ -14,7 +14,10 @@ export function ShowForm({
   onSave,
   onDelete,
 }: ShowFormProps) {
-  const { form } = useShowForm({ initialValues: values, validate });
+  const { form, defaultValues } = useShowForm({
+    initialValues: values,
+    validate,
+  });
 
   const formSetErrors = form.setErrors;
 
@@ -31,16 +34,27 @@ export function ShowForm({
   const formSetInitialValues = form.setInitialValues;
 
   useEffect(() => {
-    if (!formIsDirty("title")) formSetFieldValue("title", values.title);
+    if (!formIsDirty("title"))
+      formSetFieldValue("title", values.title ?? defaultValues.title);
 
     if (!formIsDirty("description"))
-      formSetFieldValue("description", values.description);
+      formSetFieldValue(
+        "description",
+        values.description ?? defaultValues.description,
+      );
 
     formSetInitialValues({
-      title: values.title,
-      description: values.description,
+      title: values.title ?? defaultValues.title,
+      description: values.description ?? defaultValues.description,
     });
-  }, [values, formIsDirty, formSetFieldValue, formSetInitialValues]);
+  }, [
+    values,
+    formIsDirty,
+    formSetFieldValue,
+    formSetInitialValues,
+    defaultValues.title,
+    defaultValues.description,
+  ]);
 
   return (
     <form onSubmit={form.onSubmit(handleSave)}>
@@ -54,7 +68,7 @@ export function ShowForm({
           title={labels.fields.description.title}
           {...form.getInputProps("description")}
         />
-        <Button type="submit" disabled={!form.isDirty()}>
+        <Button type="submit" disabled={!form.isDirty() || !form.isValid()}>
           {labels.buttons.save.label}
         </Button>
         <Button color="red" onClick={onDelete}>

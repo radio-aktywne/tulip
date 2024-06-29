@@ -187,6 +187,82 @@ export const labels = {
               missing: "Timezone is required",
             },
           },
+          recurrence: {
+            title: "Recurrence",
+            recurring: {
+              options: {
+                no: "No",
+                yes: "Yes",
+              },
+              errors: {
+                missing: "Recurrence is required",
+                invalid: "Recurrence must be no or yes",
+              },
+            },
+            repeat: {
+              header: "Repeat every",
+              interval: {
+                errors: {
+                  missing: "Interval is required",
+                },
+              },
+              frequency: {
+                options: {
+                  daily: {
+                    singular: "day",
+                    plural: "days",
+                  },
+                  weekly: {
+                    singular: "week",
+                    plural: "weeks",
+                  },
+                  monthly: {
+                    singular: "month",
+                    plural: "months",
+                  },
+                  yearly: {
+                    singular: "year",
+                    plural: "years",
+                  },
+                },
+                errors: {
+                  missing: "Frequency is required",
+                  invalid:
+                    "Frequency must be daily, weekly, monthly, or yearly",
+                },
+              },
+            },
+            ends: {
+              header: "Ends",
+              ends: {
+                options: {
+                  never: "Never",
+                  after: "After",
+                  on: "On",
+                },
+                errors: {
+                  missing: "Ends is required",
+                  invalid: "Ends must be never, after, or on",
+                },
+              },
+              count: {
+                count: {
+                  errors: {
+                    missing: "Count is required",
+                  },
+                },
+                text: {
+                  singular: "time",
+                  plural: "times",
+                },
+              },
+              until: {
+                errors: {
+                  missing: "Until is required",
+                },
+              },
+            },
+          },
         },
         buttons: {
           save: {
@@ -246,6 +322,82 @@ export const labels = {
             title: "Timezone",
             errors: {
               missing: "Timezone is required",
+            },
+          },
+          recurrence: {
+            title: "Recurrence",
+            recurring: {
+              options: {
+                no: "No",
+                yes: "Yes",
+              },
+              errors: {
+                missing: "Recurrence is required",
+                invalid: "Recurrence must be no or yes",
+              },
+            },
+            repeat: {
+              header: "Repeat every",
+              interval: {
+                errors: {
+                  missing: "Interval is required",
+                },
+              },
+              frequency: {
+                options: {
+                  daily: {
+                    singular: "day",
+                    plural: "days",
+                  },
+                  weekly: {
+                    singular: "week",
+                    plural: "weeks",
+                  },
+                  monthly: {
+                    singular: "month",
+                    plural: "months",
+                  },
+                  yearly: {
+                    singular: "year",
+                    plural: "years",
+                  },
+                },
+                errors: {
+                  missing: "Frequency is required",
+                  invalid:
+                    "Frequency must be daily, weekly, monthly, or yearly",
+                },
+              },
+            },
+            ends: {
+              header: "Ends",
+              ends: {
+                options: {
+                  never: "Never",
+                  after: "After",
+                  on: "On",
+                },
+                errors: {
+                  missing: "Ends is required",
+                  invalid: "Ends must be never, after, or on",
+                },
+              },
+              count: {
+                count: {
+                  errors: {
+                    missing: "Count is required",
+                  },
+                },
+                text: {
+                  singular: "time",
+                  plural: "times",
+                },
+              },
+              until: {
+                errors: {
+                  missing: "Until is required",
+                },
+              },
             },
           },
         },
