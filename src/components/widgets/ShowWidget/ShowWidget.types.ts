@@ -1,5 +1,5 @@
 import { components } from "../../../api/emishows";
 
 export type ShowWidgetProps = {
-  show: components["schemas"]["Show"];
+  show: components["schemas"]["events_models_Show"];
 };

@@ -3,7 +3,7 @@ import { components } from "../../api/emishows";
 export type UpdateEventType = components["schemas"]["EventCreateInput"]["type"];
 
 export type UpdateEventRecurrenceRuleFrequency =
-  components["schemas"]["RecurrenceRule"]["frequency"];
+  components["schemas"]["events_models_RecurrenceRule"]["frequency"];
 
 export type UpdateEventRecurrenceRule = {
   frequency: UpdateEventRecurrenceRuleFrequency;

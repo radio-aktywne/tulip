@@ -5,6 +5,6 @@ export type EventTileLabels = {
 };
 
 export type EventTileProps = {
-  event: components["schemas"]["emishows_events_models_Event"];
+  event: components["schemas"]["events_models_Event"];
   labels: EventTileLabels;
 };
