@@ -1,13 +1,13 @@
 "use server";
 
-import { emishows } from "../../api";
+import { beaver } from "../../api";
 import { DeleteShowProps } from "./types";
 
 const errorMessage = "Deleting show failed.";
 
 export async function deleteShow({ id }: DeleteShowProps) {
   try {
-    const { error } = await emishows.DELETE("/shows/{id}", {
+    const { error } = await beaver.DELETE("/shows/{id}", {
       params: { path: { id } },
     });
 

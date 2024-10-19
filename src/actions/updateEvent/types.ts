@@ -1,4 +1,4 @@
-import { components } from "../../api/emishows";
+import { components } from "../../api/beaver";
 
 export type UpdateEventType = components["schemas"]["EventCreateInput"]["type"];
 

@@ -1,6 +1,6 @@
 "use server";
 
-import { emishows } from "../../api";
+import { beaver } from "../../api";
 import dayjs from "../../utils/dayjs";
 import { UpdateEventProps } from "./types";
 
@@ -11,7 +11,7 @@ const datetimeFormat = "YYYY-MM-DDTHH:mm:ss";
 
 export async function updateEvent({ id, update }: UpdateEventProps) {
   try {
-    const { data, error } = await emishows.PATCH("/events/{id}", {
+    const { data, error } = await beaver.PATCH("/events/{id}", {
       params: { path: { id } },
       body: {
         id: update.id,

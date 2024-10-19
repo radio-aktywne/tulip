@@ -1,4 +1,4 @@
-export const colorSchemeStorageKey = "webshows-color-scheme";
+export const colorSchemeStorageKey = "tulip-color-scheme";
 export const defaultColorScheme = "auto";
-export const stateStorageKey = "webshows-state";
+export const stateStorageKey = "tulip-state";
 export const defaultDatetimeFormat = "LLL";

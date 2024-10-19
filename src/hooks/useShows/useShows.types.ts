@@ -1,5 +1,5 @@
 import { GetShowsProps } from "../../actions";
-import { components } from "../../api/emishows";
+import { components } from "../../api/beaver";
 
 export type Shows = components["schemas"]["ShowList"];
 

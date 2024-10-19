@@ -1,13 +1,13 @@
 "use server";
 
-import { emishows } from "../../api";
+import { beaver } from "../../api";
 import { DeleteEventProps } from "./types";
 
 const errorMessage = "Deleting event failed.";
 
 export async function deleteEvent({ id }: DeleteEventProps) {
   try {
-    const { error } = await emishows.DELETE("/events/{id}", {
+    const { error } = await beaver.DELETE("/events/{id}", {
       params: { path: { id } },
     });
 

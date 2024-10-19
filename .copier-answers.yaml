@@ -2,15 +2,15 @@
 _commit: 0.2.0
 _src_path: gh:radio-aktywne/template-app-next
 accountname: radio-aktywne
-appname: webshows
+appname: tulip
 description: Broadcast shows app 🎭
 docs: true
-docsurl: https://radio-aktywne.github.io/webshows
-envprefix: WEBSHOWS
-imagename: apps/webshows
-keyprefix: webshows
+docsurl: https://radio-aktywne.github.io/tulip
+envprefix: TULIP
+imagename: apps/tulip
+keyprefix: tulip
 port: 37000
 registry: true
 releases: true
-reponame: webshows
-repourl: https://github.com/radio-aktywne/webshows
+reponame: tulip
+repourl: https://github.com/radio-aktywne/tulip

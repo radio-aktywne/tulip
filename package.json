@@ -1,14 +1,14 @@
 {
-  "name": "webshows",
+  "name": "tulip",
   "private": true,
   "scripts": {
-    "dev": "next dev --hostname \"${WEBSHOWS__SERVER__HOST:-0.0.0.0}\" --port \"${WEBSHOWS__SERVER__PORT:-37000}\"",
-    "run": "next start --hostname \"${WEBSHOWS__SERVER__HOST:-0.0.0.0}\" --port \"${WEBSHOWS__SERVER__PORT:-37000}\"",
+    "dev": "next dev --hostname \"${TULIP__SERVER__HOST:-0.0.0.0}\" --port \"${TULIP__SERVER__PORT:-37000}\"",
+    "run": "next start --hostname \"${TULIP__SERVER__HOST:-0.0.0.0}\" --port \"${TULIP__SERVER__PORT:-37000}\"",
     "build": "next build",
     "clean": "rm --recursive --force build/",
     "update": "ncu --peer --upgrade && npm i --no-audit --no-fund",
-    "generate-api-emishows": "openapi-typescript openapi/emishows.yaml -o src/api/emishows/types.d.ts",
-    "generate-api": "npm run -- generate-api-emishows"
+    "generate-api-beaver": "openapi-typescript openapi/beaver.yaml -o src/api/beaver/types.d.ts",
+    "generate-api": "npm run -- generate-api-beaver"
   },
   "dependencies": {
     "@mantine/core": "^7.10.2",

@@ -1,13 +1,13 @@
 services:
-  webshows:
+  tulip:
     build:
       context: ./
       network: host
     environment:
-      - "WEBSHOWS__SERVER__HOST=${WEBSHOWS__SERVER__HOST:-0.0.0.0}"
-      - "WEBSHOWS__SERVER__PORT=${WEBSHOWS__SERVER__PORT:-37000}"
-      - "WEBSHOWS__EMISHOWS__SCHEME=${WEBSHOWS__EMISHOWS__SCHEME:-http}"
-      - "WEBSHOWS__EMISHOWS__HOST=${WEBSHOWS__EMISHOWS__HOST:-localhost}"
-      - "WEBSHOWS__EMISHOWS__PORT=${WEBSHOWS__EMISHOWS__PORT:-35000}"
-      - "WEBSHOWS__EMISHOWS__PATH=${WEBSHOWS__EMISHOWS__PATH:-}"
+      - "TULIP__SERVER__HOST=${TULIP__SERVER__HOST:-0.0.0.0}"
+      - "TULIP__SERVER__PORT=${TULIP__SERVER__PORT:-37000}"
+      - "TULIP__BEAVER__SCHEME=${TULIP__BEAVER__SCHEME:-http}"
+      - "TULIP__BEAVER__HOST=${TULIP__BEAVER__HOST:-localhost}"
+      - "TULIP__BEAVER__PORT=${TULIP__BEAVER__PORT:-35000}"
+      - "TULIP__BEAVER__PATH=${TULIP__BEAVER__PATH:-}"
     network_mode: host

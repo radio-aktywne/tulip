@@ -1,4 +1,4 @@
-import { components } from "../../../../api/emishows";
+import { components } from "../../../../api/beaver";
 
 export type ShowTileLabels = {
   text: (id: string) => string;

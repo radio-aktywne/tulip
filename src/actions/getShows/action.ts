@@ -1,6 +1,6 @@
 "use server";
 
-import { emishows } from "../../api";
+import { beaver } from "../../api";
 import { GetShowsProps } from "./types";
 
 const errorMessage = "Getting shows failed.";
@@ -13,7 +13,7 @@ export async function getShows({
   order,
 }: GetShowsProps = {}) {
   try {
-    const { data, error } = await emishows.GET("/shows", {
+    const { data, error } = await beaver.GET("/shows", {
       params: {
         query: {
           limit: limit,
