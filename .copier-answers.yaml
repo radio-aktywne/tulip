@@ -9,7 +9,7 @@ docsurl: https://radio-aktywne.github.io/tulip
 envprefix: TULIP
 imagename: apps/tulip
 keyprefix: tulip
-port: 37000
+port: 10530
 registry: true
 releases: true
 reponame: tulip
