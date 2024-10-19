@@ -5,9 +5,9 @@ services:
       network: host
     environment:
       - "TULIP__SERVER__HOST=${TULIP__SERVER__HOST:-0.0.0.0}"
-      - "TULIP__SERVER__PORT=${TULIP__SERVER__PORT:-37000}"
+      - "TULIP__SERVER__PORT=${TULIP__SERVER__PORT:-10530}"
       - "TULIP__BEAVER__SCHEME=${TULIP__BEAVER__SCHEME:-http}"
       - "TULIP__BEAVER__HOST=${TULIP__BEAVER__HOST:-localhost}"
-      - "TULIP__BEAVER__PORT=${TULIP__BEAVER__PORT:-35000}"
+      - "TULIP__BEAVER__PORT=${TULIP__BEAVER__PORT:-10500}"
       - "TULIP__BEAVER__PATH=${TULIP__BEAVER__PATH:-}"
     network_mode: host

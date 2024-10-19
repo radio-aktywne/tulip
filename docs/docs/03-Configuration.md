@@ -12,7 +12,7 @@ You can configure the app at runtime using various environment variables:
   (default: `0.0.0.0`)
 - `TULIP__SERVER__PORT` -
   port to run the server on
-  (default: `37000`)
+  (default: `10530`)
 - `TULIP__BEAVER__SCHEME`
   scheme of the HTTP API of the beaver service
   (default: `http`)
@@ -21,7 +21,7 @@ You can configure the app at runtime using various environment variables:
   (default: `localhost`)
 - `TULIP__BEAVER__PORT`
   port of the HTTP API of the beaver service
-  (default: `35000`)
+  (default: `10500`)
 - `TULIP__BEAVER__PATH`
   path of the HTTP API of the beaver service
   (default: ``)
