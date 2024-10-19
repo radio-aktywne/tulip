@@ -2,10 +2,10 @@ import type * as Preset from "@docusaurus/preset-classic";
 import type { Config } from "@docusaurus/types";
 import { themes } from "prism-react-renderer";
 
-const url = new URL("https://radio-aktywne.github.io/app-webshows");
+const url = new URL("https://radio-aktywne.github.io/webshows");
 
 const config: Config = {
-  title: "webshows app docs",
+  title: "webshows docs",
   favicon: "favicon.svg?v=1",
 
   url: `${url.protocol}//${url.host}`,
@@ -41,14 +41,14 @@ const config: Config = {
 
   themeConfig: {
     navbar: {
-      title: "webshows app docs",
+      title: "webshows docs",
       logo: {
-        alt: "webshows app docs logo",
+        alt: "webshows docs logo",
         src: "logo.svg?v=1",
       },
       items: [
         {
-          href: "https://github.com/radio-aktywne/app-webshows",
+          href: "https://github.com/radio-aktywne/webshows",
           position: "right",
           className: "header-github-link",
           "aria-label": "GitHub repository",

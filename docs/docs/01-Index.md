@@ -3,10 +3,10 @@ slug: /
 title: Index
 ---
 
-# webshows app
+# webshows
 
-Emission shows web UI 🎭
+Broadcast shows app 🎭
 
 ## 💡 About
 
-`webshows` is a web application for managing shows and events.
+`webshows` is a web app for managing shows and events.

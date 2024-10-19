@@ -1,16 +1,16 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: 0.1.1
+_commit: 0.2.0
 _src_path: gh:radio-aktywne/template-app-next
 accountname: radio-aktywne
 appname: webshows
-description: Emission shows web UI 🎭
+description: Broadcast shows app 🎭
 docs: true
-docsurl: https://radio-aktywne.github.io/app-webshows
+docsurl: https://radio-aktywne.github.io/webshows
 envprefix: WEBSHOWS
 imagename: apps/webshows
 keyprefix: webshows
 port: 37000
 registry: true
 releases: true
-reponame: app-webshows
-repourl: https://github.com/radio-aktywne/app-webshows
+reponame: webshows
+repourl: https://github.com/radio-aktywne/webshows
