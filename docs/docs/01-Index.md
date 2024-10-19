@@ -3,10 +3,10 @@ slug: /
 title: Index
 ---
 
-# webshows
+# tulip
 
 Broadcast shows app 🎭
 
 ## 💡 About
 
-`webshows` is a web app for managing shows and events.
+`tulip` is a web app for managing shows and events.

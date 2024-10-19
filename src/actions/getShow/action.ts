@@ -1,13 +1,13 @@
 "use server";
 
-import { emishows } from "../../api";
+import { beaver } from "../../api";
 import { GetShowProps } from "./types";
 
 const errorMessage = "Getting show failed.";
 
 export async function getShow({ id, include }: GetShowProps) {
   try {
-    const { data, error } = await emishows.GET("/shows/{id}", {
+    const { data, error } = await beaver.GET("/shows/{id}", {
       params: {
         path: { id },
         query: { include: include && JSON.stringify(include) },

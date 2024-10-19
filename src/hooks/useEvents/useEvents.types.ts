@@ -1,5 +1,5 @@
 import { GetEventsProps } from "../../actions";
-import { components } from "../../api/emishows";
+import { components } from "../../api/beaver";
 
 export type Events = components["schemas"]["EventList"];
 

@@ -1,6 +1,6 @@
 "use server";
 
-import { emishows } from "../../api";
+import { beaver } from "../../api";
 import { GetEventsProps } from "./types";
 
 const errorMessage = "Getting events failed.";
@@ -14,7 +14,7 @@ export async function getEvents({
   order,
 }: GetEventsProps = {}) {
   try {
-    const { data, error } = await emishows.GET("/events", {
+    const { data, error } = await beaver.GET("/events", {
       params: {
         query: {
           limit: limit,

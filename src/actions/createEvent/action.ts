@@ -1,6 +1,6 @@
 "use server";
 
-import { emishows } from "../../api";
+import { beaver } from "../../api";
 import dayjs from "../../utils/dayjs";
 import { CreateEventProps } from "./types";
 
@@ -19,7 +19,7 @@ export async function createEvent({
   recurrence,
 }: CreateEventProps) {
   try {
-    const { data, error } = await emishows.POST("/events", {
+    const { data, error } = await beaver.POST("/events", {
       body: {
         id,
         showId: show,

@@ -2,10 +2,10 @@ import type * as Preset from "@docusaurus/preset-classic";
 import type { Config } from "@docusaurus/types";
 import { themes } from "prism-react-renderer";
 
-const url = new URL("https://radio-aktywne.github.io/webshows");
+const url = new URL("https://radio-aktywne.github.io/tulip");
 
 const config: Config = {
-  title: "webshows docs",
+  title: "tulip docs",
   favicon: "favicon.svg?v=1",
 
   url: `${url.protocol}//${url.host}`,
@@ -41,14 +41,14 @@ const config: Config = {
 
   themeConfig: {
     navbar: {
-      title: "webshows docs",
+      title: "tulip docs",
       logo: {
-        alt: "webshows docs logo",
+        alt: "tulip docs logo",
         src: "logo.svg?v=1",
       },
       items: [
         {
-          href: "https://github.com/radio-aktywne/webshows",
+          href: "https://github.com/radio-aktywne/tulip",
           position: "right",
           className: "header-github-link",
           "aria-label": "GitHub repository",

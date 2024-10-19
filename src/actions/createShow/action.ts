@@ -1,6 +1,6 @@
 "use server";
 
-import { emishows } from "../../api";
+import { beaver } from "../../api";
 import { CreateShowProps } from "./types";
 
 const genericErrorMessage = "Creating show failed.";
@@ -8,7 +8,7 @@ const badRequestErrorMessage = "Invalid data.";
 
 export async function createShow({ id, title, description }: CreateShowProps) {
   try {
-    const { data, error } = await emishows.POST("/shows", {
+    const { data, error } = await beaver.POST("/shows", {
       body: { id, title, description },
     });
 

@@ -9,47 +9,47 @@ export const labels = {
   },
   pages: {
     index: {
-      title: "webshows",
-      description: "webshows",
+      title: "tulip",
+      description: "tulip",
     },
     shows: {
-      title: "Shows • webshows",
-      description: "webshows",
+      title: "Shows • tulip",
+      description: "tulip",
     },
     show: {
-      title: (id: string) => `Show ${id} • webshows`,
-      description: "webshows",
+      title: (id: string) => `Show ${id} • tulip`,
+      description: "tulip",
     },
     showNotFound: {
       text: "Show not found",
     },
     newShow: {
-      title: "New Show • webshows",
-      description: "webshows",
+      title: "New Show • tulip",
+      description: "tulip",
     },
     events: {
-      title: "Events • webshows",
-      description: "webshows",
+      title: "Events • tulip",
+      description: "tulip",
     },
     event: {
-      title: (id: string) => `Event ${id} • webshows`,
-      description: "webshows",
+      title: (id: string) => `Event ${id} • tulip`,
+      description: "tulip",
     },
     eventNotFound: {
       text: "Event not found",
     },
     newEvent: {
-      title: "New Event • webshows",
-      description: "webshows",
+      title: "New Event • tulip",
+      description: "tulip",
     },
     notFound: {
-      title: "Not Found • webshows",
-      description: "webshows",
+      title: "Not Found • tulip",
+      description: "tulip",
       text: "Page not found",
     },
     error: {
-      title: "Error • webshows",
-      description: "webshows",
+      title: "Error • tulip",
+      description: "tulip",
       text: "Something went wrong",
       buttons: {
         retry: {

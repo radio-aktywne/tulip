@@ -1,6 +1,6 @@
 "use server";
 
-import { emishows } from "../../api";
+import { beaver } from "../../api";
 import { UpdateShowProps } from "./types";
 
 const genericErrorMessage = "Updating show failed.";
@@ -8,7 +8,7 @@ const badRequestErrorMessage = "Invalid data.";
 
 export async function updateShow({ id, update }: UpdateShowProps) {
   try {
-    const { data, error } = await emishows.PATCH("/shows/{id}", {
+    const { data, error } = await beaver.PATCH("/shows/{id}", {
       params: { path: { id } },
       body: {
         id: update.id,
