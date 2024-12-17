@@ -1,0 +1,407 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2024-11-09 16:23+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: en\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/components/widgets/events/event-widget/components/edit-event-form/main.tsx:181
+#: src/components/widgets/events/new-event-widget/components/create-event-form/main.tsx:175
+msgid "{count, plural, one {time} other {times}}"
+msgstr "{count, plural, one {time} other {times}}"
+
+#: src/components/widgets/events/event-widget/components/edit-event-form/utils.ts:41
+#: src/components/widgets/events/new-event-widget/components/create-event-form/utils.ts:41
+msgid "{interval, plural, one {day} other {days}}"
+msgstr "{interval, plural, one {day} other {days}}"
+
+#: src/components/widgets/events/event-widget/components/edit-event-form/utils.ts:45
+#: src/components/widgets/events/new-event-widget/components/create-event-form/utils.ts:45
+msgid "{interval, plural, one {month} other {months}}"
+msgstr "{interval, plural, one {month} other {months}}"
+
+#: src/components/widgets/events/event-widget/components/edit-event-form/utils.ts:49
+#: src/components/widgets/events/new-event-widget/components/create-event-form/utils.ts:49
+msgid "{interval, plural, one {week} other {weeks}}"
+msgstr "{interval, plural, one {week} other {weeks}}"
+
+#: src/components/widgets/events/event-widget/components/edit-event-form/utils.ts:53
+#: src/components/widgets/events/new-event-widget/components/create-event-form/utils.ts:53
+msgid "{interval, plural, one {year} other {years}}"
+msgstr "{interval, plural, one {year} other {years}}"
+
+#: src/components/widgets/events/event-widget/components/edit-event-form/utils.ts:62
+#: src/components/widgets/events/new-event-widget/components/create-event-form/utils.ts:62
+msgid "After"
+msgstr "After"
+
+#: src/actions/beaver/events/create-event/constants.ts:4
+msgid "An error occurred while creating the event."
+msgstr "An error occurred while creating the event."
+
+#: src/actions/beaver/shows/create-show/constants.ts:4
+msgid "An error occurred while creating the show."
+msgstr "An error occurred while creating the show."
+
+#: src/actions/beaver/events/delete-event/constants.ts:4
+msgid "An error occurred while deleting the event."
+msgstr "An error occurred while deleting the event."
+
+#: src/actions/beaver/shows/delete-show/constants.ts:4
+msgid "An error occurred while deleting the show."
+msgstr "An error occurred while deleting the show."
+
+#: src/actions/beaver/events/get-event/constants.ts:4
+msgid "An error occurred while fetching the event."
+msgstr "An error occurred while fetching the event."
+
+#: src/actions/beaver/shows/get-show/constants.ts:4
+msgid "An error occurred while fetching the show."
+msgstr "An error occurred while fetching the show."
+
+#: src/actions/beaver/events/list-events/constants.ts:4
+msgid "An error occurred while listing events."
+msgstr "An error occurred while listing events."
+
+#: src/actions/beaver/shows/list-shows/constants.ts:4
+msgid "An error occurred while listing shows."
+msgstr "An error occurred while listing shows."
+
+#: src/actions/beaver/events/update-event/constants.ts:4
+msgid "An error occurred while updating the event."
+msgstr "An error occurred while updating the event."
+
+#: src/actions/beaver/shows/update-show/constants.ts:4
+msgid "An error occurred while updating the show."
+msgstr "An error occurred while updating the show."
+
+#: src/components/widgets/events/event-widget/main.tsx:109
+#: src/components/widgets/events/new-event-widget/main.tsx:68
+msgid "Count is required"
+msgstr "Count is required"
+
+#: src/components/widgets/events/event-list-widget/main.tsx:54
+#: src/components/widgets/events/new-event-widget/components/create-event-form/main.tsx:199
+#: src/components/widgets/shows/new-show-widget/components/create-show-form/main.tsx:54
+#: src/components/widgets/shows/show-list-widget/main.tsx:54
+msgid "Create"
+msgstr "Create"
+
+#: src/components/widgets/events/event-widget/components/edit-event-form/main.tsx:208
+#: src/components/widgets/shows/show-widget/components/edit-show-form/main.tsx:63
+msgid "Delete"
+msgstr "Delete"
+
+#: src/components/widgets/shows/new-show-widget/components/create-show-form/main.tsx:49
+#: src/components/widgets/shows/show-widget/components/edit-show-form/main.tsx:55
+msgid "Description"
+msgstr "Description"
+
+#: src/components/widgets/events/event-widget/components/edit-event-form/main.tsx:123
+#: src/components/widgets/events/new-event-widget/components/create-event-form/main.tsx:117
+msgid "End"
+msgstr "End"
+
+#: src/components/widgets/events/event-widget/main.tsx:93
+#: src/components/widgets/events/new-event-widget/main.tsx:52
+msgid "End is required"
+msgstr "End is required"
+
+#: src/components/widgets/events/event-widget/components/edit-event-form/main.tsx:162
+#: src/components/widgets/events/new-event-widget/components/create-event-form/main.tsx:156
+msgid "Ends"
+msgstr "Ends"
+
+#: src/components/widgets/events/event-widget/main.tsx:106
+#: src/components/widgets/events/new-event-widget/main.tsx:65
+msgid "Ends is required"
+msgstr "Ends is required"
+
+#: src/hooks/use-toasts/main.tsx:19
+msgid "Error"
+msgstr "Error"
+
+#: src/components/metadata/root/root-error-metadata/main.tsx:14
+msgid "Error • tulip"
+msgstr "Error • tulip"
+
+#: src/app/events/[id]/page.tsx:22
+#: src/components/metadata/events/event-page-metadata/main.tsx:14
+msgid "Event {id} • tulip"
+msgstr "Event {id} • tulip"
+
+#: src/components/widgets/events/new-event-widget/main.tsx:37
+msgid "Event created successfully"
+msgstr "Event created successfully"
+
+#: src/components/widgets/events/event-widget/main.tsx:147
+msgid "Event deleted successfully"
+msgstr "Event deleted successfully"
+
+#: src/components/metadata/events/event-not-found-metadata/main.tsx:14
+msgid "Event not found • tulip"
+msgstr "Event not found • tulip"
+
+#: src/actions/beaver/events/delete-event/constants.ts:6
+#: src/actions/beaver/events/get-event/constants.ts:6
+#: src/actions/beaver/events/update-event/constants.ts:6
+#: src/components/views/events/event-not-found-view/main.tsx:12
+msgid "Event not found."
+msgstr "Event not found."
+
+#: src/components/widgets/events/event-widget/main.tsx:78
+msgid "Event updated successfully"
+msgstr "Event updated successfully"
+
+#: src/components/views/root/root-page-view/main.tsx:19
+msgid "Events"
+msgstr "Events"
+
+#: src/app/events/page.tsx:18
+#: src/components/metadata/events/event-list-page-metadata/main.tsx:14
+msgid "Events • tulip"
+msgstr "Events • tulip"
+
+#: src/components/widgets/events/event-widget/main.tsx:103
+#: src/components/widgets/events/new-event-widget/main.tsx:62
+msgid "Frequency is required"
+msgstr "Frequency is required"
+
+#: src/hooks/use-toasts/main.tsx:31
+msgid "Info"
+msgstr "Info"
+
+#: src/components/widgets/events/event-widget/main.tsx:100
+#: src/components/widgets/events/new-event-widget/main.tsx:59
+msgid "Interval is required"
+msgstr "Interval is required"
+
+#: src/actions/beaver/events/create-event/constants.ts:5
+#: src/actions/beaver/events/delete-event/constants.ts:5
+#: src/actions/beaver/events/get-event/constants.ts:5
+#: src/actions/beaver/events/list-events/constants.ts:5
+#: src/actions/beaver/events/update-event/constants.ts:5
+#: src/actions/beaver/shows/create-show/constants.ts:5
+#: src/actions/beaver/shows/delete-show/constants.ts:5
+#: src/actions/beaver/shows/get-show/constants.ts:5
+#: src/actions/beaver/shows/list-shows/constants.ts:5
+#: src/actions/beaver/shows/update-show/constants.ts:5
+msgid "Invalid input."
+msgstr "Invalid input."
+
+#: src/components/widgets/events/event-widget/components/edit-event-form/utils.ts:8
+#: src/components/widgets/events/new-event-widget/components/create-event-form/utils.ts:8
+msgid "Live"
+msgstr "Live"
+
+#: src/components/widgets/events/event-widget/components/edit-event-form/utils.ts:64
+#: src/components/widgets/events/new-event-widget/components/create-event-form/utils.ts:64
+msgid "Never"
+msgstr "Never"
+
+#: src/app/events/new/page.tsx:18
+#: src/components/metadata/events/new-event-page-metadata/main.tsx:14
+msgid "New event • tulip"
+msgstr "New event • tulip"
+
+#: src/app/shows/new/page.tsx:18
+#: src/components/metadata/shows/new-show-page-metadata/main.tsx:14
+msgid "New show • tulip"
+msgstr "New show • tulip"
+
+#: src/components/widgets/events/event-widget/components/edit-event-form/utils.ts:29
+#: src/components/widgets/events/new-event-widget/components/create-event-form/utils.ts:29
+msgid "No"
+msgstr "No"
+
+#: src/components/widgets/events/event-list-widget/main.tsx:38
+msgid "No events."
+msgstr "No events."
+
+#: src/components/widgets/shows/show-list-widget/main.tsx:38
+msgid "No shows."
+msgstr "No shows."
+
+#: src/components/metadata/root/root-not-found-metadata/main.tsx:14
+msgid "Not Found • tulip"
+msgstr "Not Found • tulip"
+
+#: src/components/widgets/events/event-widget/components/edit-event-form/utils.ts:66
+#: src/components/widgets/events/new-event-widget/components/create-event-form/utils.ts:66
+msgid "On"
+msgstr "On"
+
+#: src/components/views/root/root-not-found-view/main.tsx:12
+msgid "Page not found"
+msgstr "Page not found"
+
+#: src/components/widgets/events/event-widget/components/edit-event-form/utils.ts:10
+#: src/components/widgets/events/new-event-widget/components/create-event-form/utils.ts:10
+msgid "Prerecorded"
+msgstr "Prerecorded"
+
+#: src/components/widgets/events/event-widget/components/edit-event-form/main.tsx:136
+#: src/components/widgets/events/new-event-widget/components/create-event-form/main.tsx:130
+msgid "Recurring"
+msgstr "Recurring"
+
+#: src/components/widgets/events/event-widget/components/edit-event-form/main.tsx:143
+#: src/components/widgets/events/new-event-widget/components/create-event-form/main.tsx:137
+msgid "Repeat every"
+msgstr "Repeat every"
+
+#: src/components/widgets/events/event-widget/components/edit-event-form/utils.ts:12
+#: src/components/widgets/events/new-event-widget/components/create-event-form/utils.ts:12
+msgid "Replay"
+msgstr "Replay"
+
+#: src/components/views/root/root-error-view/main.tsx:22
+msgid "Retry"
+msgstr "Retry"
+
+#: src/components/widgets/events/event-widget/components/edit-event-form/main.tsx:205
+#: src/components/widgets/shows/show-widget/components/edit-show-form/main.tsx:60
+msgid "Save"
+msgstr "Save"
+
+#: src/components/widgets/events/event-widget/components/edit-event-form/main.tsx:110
+#: src/components/widgets/events/new-event-widget/components/create-event-form/main.tsx:104
+msgid "Show"
+msgstr "Show"
+
+#: src/app/shows/[id]/page.tsx:22
+#: src/components/metadata/shows/show-page-metadata/main.tsx:14
+msgid "Show {id} • tulip"
+msgstr "Show {id} • tulip"
+
+#: src/components/widgets/shows/new-show-widget/main.tsx:36
+msgid "Show created successfully"
+msgstr "Show created successfully"
+
+#: src/components/widgets/shows/show-widget/main.tsx:72
+msgid "Show deleted successfully"
+msgstr "Show deleted successfully"
+
+#: src/components/widgets/events/event-widget/main.tsx:88
+#: src/components/widgets/events/new-event-widget/main.tsx:47
+msgid "Show is required"
+msgstr "Show is required"
+
+#: src/components/metadata/shows/show-not-found-metadata/main.tsx:14
+msgid "Show not found • tulip"
+msgstr "Show not found • tulip"
+
+#: src/actions/beaver/shows/delete-show/constants.ts:6
+#: src/actions/beaver/shows/get-show/constants.ts:6
+#: src/actions/beaver/shows/update-show/constants.ts:6
+#: src/components/views/shows/show-not-found-view/main.tsx:12
+msgid "Show not found."
+msgstr "Show not found."
+
+#: src/components/widgets/shows/show-widget/main.tsx:49
+msgid "Show updated successfully"
+msgstr "Show updated successfully"
+
+#: src/components/views/root/root-page-view/main.tsx:16
+msgid "Shows"
+msgstr "Shows"
+
+#: src/app/shows/page.tsx:18
+#: src/components/metadata/shows/show-list-page-metadata/main.tsx:14
+msgid "Shows • tulip"
+msgstr "Shows • tulip"
+
+#: src/components/views/root/root-error-view/main.tsx:15
+msgid "Something went wrong"
+msgstr "Something went wrong"
+
+#: src/components/widgets/events/event-widget/components/edit-event-form/main.tsx:116
+#: src/components/widgets/events/new-event-widget/components/create-event-form/main.tsx:110
+msgid "Start"
+msgstr "Start"
+
+#: src/components/widgets/events/event-widget/main.tsx:91
+#: src/components/widgets/events/new-event-widget/main.tsx:50
+msgid "Start is required"
+msgstr "Start is required"
+
+#: src/hooks/use-toasts/main.tsx:43
+msgid "Success"
+msgstr "Success"
+
+#: src/components/widgets/events/event-widget/components/edit-event-form/main.tsx:130
+#: src/components/widgets/events/new-event-widget/components/create-event-form/main.tsx:124
+msgid "Timezone"
+msgstr "Timezone"
+
+#: src/components/widgets/events/event-widget/main.tsx:96
+#: src/components/widgets/events/new-event-widget/main.tsx:55
+msgid "Timezone is required"
+msgstr "Timezone is required"
+
+#: src/components/widgets/shows/new-show-widget/components/create-show-form/main.tsx:44
+#: src/components/widgets/shows/show-widget/components/edit-show-form/main.tsx:50
+msgid "Title"
+msgstr "Title"
+
+#: src/components/widgets/shows/new-show-widget/main.tsx:45
+#: src/components/widgets/shows/show-widget/main.tsx:58
+msgid "Title is required"
+msgstr "Title is required"
+
+#: src/app/events/[id]/page.tsx:23
+#: src/app/events/new/page.tsx:19
+#: src/app/events/page.tsx:19
+#: src/app/layout.tsx:19
+#: src/app/layout.tsx:20
+#: src/app/page.tsx:16
+#: src/app/page.tsx:17
+#: src/app/shows/[id]/page.tsx:23
+#: src/app/shows/new/page.tsx:19
+#: src/app/shows/page.tsx:19
+#: src/components/metadata/events/event-list-page-metadata/main.tsx:13
+#: src/components/metadata/events/event-not-found-metadata/main.tsx:13
+#: src/components/metadata/events/event-page-metadata/main.tsx:13
+#: src/components/metadata/events/new-event-page-metadata/main.tsx:13
+#: src/components/metadata/root/root-error-metadata/main.tsx:13
+#: src/components/metadata/root/root-not-found-metadata/main.tsx:13
+#: src/components/metadata/root/root-page-metadata/main.tsx:13
+#: src/components/metadata/root/root-page-metadata/main.tsx:14
+#: src/components/metadata/shows/new-show-page-metadata/main.tsx:13
+#: src/components/metadata/shows/show-list-page-metadata/main.tsx:13
+#: src/components/metadata/shows/show-not-found-metadata/main.tsx:13
+#: src/components/metadata/shows/show-page-metadata/main.tsx:13
+msgid "tulip"
+msgstr "tulip"
+
+#: src/components/widgets/events/event-widget/components/edit-event-form/main.tsx:104
+#: src/components/widgets/events/new-event-widget/components/create-event-form/main.tsx:98
+msgid "Type"
+msgstr "Type"
+
+#: src/components/widgets/events/event-widget/main.tsx:86
+#: src/components/widgets/events/new-event-widget/main.tsx:45
+msgid "Type is required"
+msgstr "Type is required"
+
+#: src/components/widgets/events/event-widget/main.tsx:112
+#: src/components/widgets/events/new-event-widget/main.tsx:71
+msgid "Until is required"
+msgstr "Until is required"
+
+#: src/hooks/use-toasts/main.tsx:55
+msgid "Warning"
+msgstr "Warning"
+
+#: src/components/widgets/events/event-widget/components/edit-event-form/utils.ts:31
+#: src/components/widgets/events/new-event-widget/components/create-event-form/utils.ts:31
+msgid "Yes"
+msgstr "Yes"
