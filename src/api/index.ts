@@ -1,1 +1,0 @@
-export { beaver } from "./beaver";

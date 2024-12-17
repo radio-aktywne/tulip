@@ -1,22 +1,36 @@
-import { notFound } from "next/navigation";
-import { getEvent } from "../../../actions";
-import { EventWidget } from "../../../components";
+import { i18n } from "@lingui/core";
+import { msg, t } from "@lingui/macro";
+import { Metadata } from "next";
 
-type EventPageParams = Readonly<{
-  id: string;
-}>;
-
-export type EventPageProps = Readonly<{
-  params: EventPageParams;
-}>;
+import { EventPageMetadata } from "../../../components/metadata/events/event-page-metadata";
+import { EventPageView } from "../../../components/views/events/event-page-view";
+import { getLanguage } from "../../../lib/i18n/get-language";
+import { loadLocale } from "../../../lib/i18n/load-locale";
+import { EventPageInput } from "./types";
 
 export const dynamic = "force-dynamic";
 
-export default async function EventPage({ params }: EventPageProps) {
-  const { data: event, error } = await getEvent({ id: params.id });
+export async function generateMetadata({
+  params,
+}: EventPageInput): Promise<Metadata> {
+  const id = params.id;
 
-  if (error !== undefined) throw new Error(error);
-  if (event === undefined) notFound();
+  const { language } = getLanguage();
+  await loadLocale({ i18n, language });
 
-  return <EventWidget event={event} />;
+  return {
+    description: t(i18n)(msg({ message: `Event ${id} • tulip` })),
+    title: t(i18n)(msg({ message: "tulip" })),
+  };
+}
+
+export default function EventPage({ params }: EventPageInput) {
+  const id = params.id;
+
+  return (
+    <>
+      <EventPageMetadata id={id} />
+      <EventPageView id={id} />
+    </>
+  );
 }
