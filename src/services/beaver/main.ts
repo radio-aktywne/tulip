@@ -3,13 +3,13 @@ import "server-only";
 
 import type { paths } from "./types";
 
-const scheme = process.env.TULIP__BEAVER__SCHEME || "http";
-const host = process.env.TULIP__BEAVER__HOST || "localhost";
+const scheme = process.env.TULIP__BEAVER__HTTP__SCHEME || "http";
+const host = process.env.TULIP__BEAVER__HTTP__HOST || "localhost";
 const port =
-  process.env.TULIP__BEAVER__PORT === undefined
+  process.env.TULIP__BEAVER__HTTP__PORT === undefined
     ? 10500
-    : process.env.TULIP__BEAVER__PORT;
-const path = (process.env.TULIP__BEAVER__PATH || "")
+    : process.env.TULIP__BEAVER__HTTP__PORT;
+const path = (process.env.TULIP__BEAVER__HTTP__PATH || "")
   // Ensure path starts with a slash
   .replace(/^(?!\/)(.*)$/, "/$1")
   // Remove trailing slashes
