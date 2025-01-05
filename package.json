@@ -4,11 +4,12 @@
   "scripts": {
     "build": "next build",
     "clean": "rm --recursive --force build/",
-    "dev": "next dev --hostname \"${TULIP__SERVER__HOST:-0.0.0.0}\" --port \"${TULIP__SERVER__PORT:-10530}\"",
-    "generate-api": "npm run -- generate-api-beaver",
+    "dev": "AUTH_URL=\"${TULIP__URLS__PUBLIC:-http://localhost:10530}\" next dev --hostname \"${TULIP__SERVER__HOST:-0.0.0.0}\" --port \"${TULIP__SERVER__PORT:-10530}\"",
+    "generate-api": "npm run -- generate-api-beaver && npm run -- generate-api-scorpion",
     "generate-api-beaver": "openapi-typescript openapi/beaver.yaml -o src/services/beaver/types.d.ts",
+    "generate-api-scorpion": "openapi-typescript openapi/scorpion.yaml -o src/services/scorpion/types.d.ts",
     "locales": "lingui extract --clean --overwrite",
-    "run": "next start --hostname \"${TULIP__SERVER__HOST:-0.0.0.0}\" --port \"${TULIP__SERVER__PORT:-10530}\"",
+    "run": "AUTH_URL=\"${TULIP__URLS__PUBLIC:-http://localhost:10530}\" next start --hostname \"${TULIP__SERVER__HOST:-0.0.0.0}\" --port \"${TULIP__SERVER__PORT:-10530}\"",
     "update": "ncu --peer --upgrade && npm i --no-audit --no-fund"
   },
   "dependencies": {
@@ -24,6 +25,7 @@
     "dayjs": "^1.11.13",
     "immer": "^10.1.1",
     "next": "14.2.17",
+    "next-auth": "^5.0.0-beta.25",
     "openapi-fetch": "^0.13.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

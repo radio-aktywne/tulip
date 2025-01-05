@@ -83,6 +83,11 @@ msgstr "An error occurred while updating the event."
 msgid "An error occurred while updating the show."
 msgstr "An error occurred while updating the show."
 
+#: src/app/auth/error/page.tsx:18
+#: src/components/metadata/auth/auth-error-page-metadata/main.tsx:14
+msgid "Auth error • tulip"
+msgstr "Auth error • tulip"
+
 #: src/components/widgets/events/event-widget/main.tsx:109
 #: src/components/widgets/events/new-event-widget/main.tsx:68
 msgid "Count is required"
@@ -133,7 +138,11 @@ msgstr "Error"
 msgid "Error • tulip"
 msgstr "Error • tulip"
 
-#: src/app/events/[id]/page.tsx:22
+#: src/components/views/auth/auth-error-page-view/main.tsx:14
+msgid "Error in auth flow"
+msgstr "Error in auth flow"
+
+#: src/app/(protected)/events/[id]/page.tsx:23
 #: src/components/metadata/events/event-page-metadata/main.tsx:14
 msgid "Event {id} • tulip"
 msgstr "Event {id} • tulip"
@@ -165,7 +174,7 @@ msgstr "Event updated successfully"
 msgid "Events"
 msgstr "Events"
 
-#: src/app/events/page.tsx:18
+#: src/app/(protected)/events/page.tsx:19
 #: src/components/metadata/events/event-list-page-metadata/main.tsx:14
 msgid "Events • tulip"
 msgstr "Events • tulip"
@@ -202,17 +211,21 @@ msgstr "Invalid input."
 msgid "Live"
 msgstr "Live"
 
+#: src/components/layouts/session-layout/components/user-menu/components/logout-button/main.tsx:23
+msgid "Logout"
+msgstr "Logout"
+
 #: src/components/widgets/events/event-widget/components/edit-event-form/utils.ts:64
 #: src/components/widgets/events/new-event-widget/components/create-event-form/utils.ts:64
 msgid "Never"
 msgstr "Never"
 
-#: src/app/events/new/page.tsx:18
+#: src/app/(protected)/events/new/page.tsx:19
 #: src/components/metadata/events/new-event-page-metadata/main.tsx:14
 msgid "New event • tulip"
 msgstr "New event • tulip"
 
-#: src/app/shows/new/page.tsx:18
+#: src/app/(protected)/shows/new/page.tsx:19
 #: src/components/metadata/shows/new-show-page-metadata/main.tsx:14
 msgid "New show • tulip"
 msgstr "New show • tulip"
@@ -277,7 +290,7 @@ msgstr "Save"
 msgid "Show"
 msgstr "Show"
 
-#: src/app/shows/[id]/page.tsx:22
+#: src/app/(protected)/shows/[id]/page.tsx:23
 #: src/components/metadata/shows/show-page-metadata/main.tsx:14
 msgid "Show {id} • tulip"
 msgstr "Show {id} • tulip"
@@ -314,7 +327,7 @@ msgstr "Show updated successfully"
 msgid "Shows"
 msgstr "Shows"
 
-#: src/app/shows/page.tsx:18
+#: src/app/(protected)/shows/page.tsx:19
 #: src/components/metadata/shows/show-list-page-metadata/main.tsx:14
 msgid "Shows • tulip"
 msgstr "Shows • tulip"
@@ -357,16 +370,18 @@ msgstr "Title"
 msgid "Title is required"
 msgstr "Title is required"
 
-#: src/app/events/[id]/page.tsx:23
-#: src/app/events/new/page.tsx:19
-#: src/app/events/page.tsx:19
+#: src/app/(protected)/events/[id]/page.tsx:22
+#: src/app/(protected)/events/new/page.tsx:18
+#: src/app/(protected)/events/page.tsx:18
+#: src/app/(protected)/page.tsx:16
+#: src/app/(protected)/page.tsx:17
+#: src/app/(protected)/shows/[id]/page.tsx:22
+#: src/app/(protected)/shows/new/page.tsx:18
+#: src/app/(protected)/shows/page.tsx:18
+#: src/app/auth/error/page.tsx:17
 #: src/app/layout.tsx:19
 #: src/app/layout.tsx:20
-#: src/app/page.tsx:16
-#: src/app/page.tsx:17
-#: src/app/shows/[id]/page.tsx:23
-#: src/app/shows/new/page.tsx:19
-#: src/app/shows/page.tsx:19
+#: src/components/metadata/auth/auth-error-page-metadata/main.tsx:13
 #: src/components/metadata/events/event-list-page-metadata/main.tsx:13
 #: src/components/metadata/events/event-not-found-metadata/main.tsx:13
 #: src/components/metadata/events/event-page-metadata/main.tsx:13
@@ -405,3 +420,43 @@ msgstr "Warning"
 #: src/components/widgets/events/new-event-widget/components/create-event-form/utils.ts:31
 msgid "Yes"
 msgstr "Yes"
+
+#: src/actions/beaver/events/create-event/constants.ts:6
+msgid "You are not authorized to create the event."
+msgstr "You are not authorized to create the event."
+
+#: src/actions/beaver/shows/create-show/constants.ts:6
+msgid "You are not authorized to create the show."
+msgstr "You are not authorized to create the show."
+
+#: src/actions/beaver/events/delete-event/constants.ts:7
+msgid "You are not authorized to delete the event."
+msgstr "You are not authorized to delete the event."
+
+#: src/actions/beaver/shows/delete-show/constants.ts:7
+msgid "You are not authorized to delete the show."
+msgstr "You are not authorized to delete the show."
+
+#: src/actions/beaver/events/get-event/constants.ts:7
+msgid "You are not authorized to fetch the event."
+msgstr "You are not authorized to fetch the event."
+
+#: src/actions/beaver/shows/get-show/constants.ts:7
+msgid "You are not authorized to fetch the show."
+msgstr "You are not authorized to fetch the show."
+
+#: src/actions/beaver/events/list-events/constants.ts:6
+msgid "You are not authorized to list events."
+msgstr "You are not authorized to list events."
+
+#: src/actions/beaver/shows/list-shows/constants.ts:6
+msgid "You are not authorized to list shows."
+msgstr "You are not authorized to list shows."
+
+#: src/actions/beaver/events/update-event/constants.ts:7
+msgid "You are not authorized to update the event."
+msgstr "You are not authorized to update the event."
+
+#: src/actions/beaver/shows/update-show/constants.ts:7
+msgid "You are not authorized to update the show."
+msgstr "You are not authorized to update the show."

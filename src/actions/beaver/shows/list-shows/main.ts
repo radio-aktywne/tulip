@@ -1,5 +1,6 @@
 "use server";
 
+import { auth } from "../../../../auth";
 import { BeaverError } from "../../../../lib/beaver/errors";
 import { listShows as internalListShows } from "../../../../lib/beaver/shows/list-shows";
 import { errors } from "./constants";
@@ -9,6 +10,9 @@ import { ListShowsInput, ListShowsOutput } from "./types";
 export async function listShows(
   input: ListShowsInput,
 ): Promise<ListShowsOutput> {
+  const session = await auth.auth();
+  if (!session) return { error: errors.unauthorized };
+
   const parsed = inputSchema.safeParse(input);
   if (!parsed.success) return { error: errors.invalidInput };
 

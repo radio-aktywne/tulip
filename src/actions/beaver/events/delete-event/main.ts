@@ -1,5 +1,6 @@
 "use server";
 
+import { auth } from "../../../../auth";
 import { BeaverError } from "../../../../lib/beaver/errors";
 import {
   EventNotFoundError,
@@ -12,6 +13,9 @@ import { DeleteEventInput, DeleteEventOutput } from "./types";
 export async function deleteEvent(
   input: DeleteEventInput,
 ): Promise<DeleteEventOutput> {
+  const session = await auth.auth();
+  if (!session) return { error: errors.unauthorized };
+
   const parsed = inputSchema.safeParse(input);
   if (!parsed.success) return { error: errors.invalidInput };
 
