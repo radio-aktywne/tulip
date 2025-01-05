@@ -1,5 +1,6 @@
 "use server";
 
+import { auth } from "../../../../auth";
 import { BeaverError } from "../../../../lib/beaver/errors";
 import {
   updateShow as internalUpdateShow,
@@ -13,6 +14,9 @@ import { UpdateShowInput, UpdateShowOutput } from "./types";
 export async function updateShow(
   input: UpdateShowInput,
 ): Promise<UpdateShowOutput> {
+  const session = await auth.auth();
+  if (!session) return { error: errors.unauthorized };
+
   const parsed = inputSchema.safeParse(input);
   if (!parsed.success) return { error: errors.invalidInput };
 
