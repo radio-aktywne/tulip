@@ -6,7 +6,6 @@ services:
     environment:
       - "TULIP__SERVER__HOST=${TULIP__SERVER__HOST:-0.0.0.0}"
       - "TULIP__SERVER__PORT=${TULIP__SERVER__PORT:-10530}"
-      - "TULIP__COOKIES__DOMAIN=${TULIP__COOKIES__DOMAIN:-}"
       - "TULIP__SECRETS__AUTH=${TULIP__SECRETS__AUTH:-secret}"
       - "TULIP__URLS__PUBLIC=${TULIP__URLS__PUBLIC:-http://localhost:10530}"
       - "TULIP__BEAVER__HTTP__SCHEME=${TULIP__BEAVER__HTTP__SCHEME:-http}"

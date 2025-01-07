@@ -1,6 +1,6 @@
 "use server";
 
-import { auth } from "../../../../auth";
+import { getSession } from "../../../../lib/auth/get-session";
 import { BeaverError } from "../../../../lib/beaver/errors";
 import {
   getShow as internalGetShow,
@@ -11,7 +11,7 @@ import { inputSchema } from "./schemas";
 import { GetShowInput, GetShowOutput } from "./types";
 
 export async function getShow(input: GetShowInput): Promise<GetShowOutput> {
-  const session = await auth.auth();
+  const { session } = await getSession();
   if (!session) return { error: errors.unauthorized };
 
   const parsed = inputSchema.safeParse(input);

@@ -1,6 +1,6 @@
 "use server";
 
-import { auth } from "../../../../auth";
+import { getSession } from "../../../../lib/auth/get-session";
 import { BeaverError } from "../../../../lib/beaver/errors";
 import {
   deleteShow as internalDeleteShow,
@@ -13,7 +13,7 @@ import { DeleteShowInput, DeleteShowOutput } from "./types";
 export async function deleteShow(
   input: DeleteShowInput,
 ): Promise<DeleteShowOutput> {
-  const session = await auth.auth();
+  const { session } = await getSession();
   if (!session) return { error: errors.unauthorized };
 
   const parsed = inputSchema.safeParse(input);

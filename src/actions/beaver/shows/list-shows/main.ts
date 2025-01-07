@@ -1,6 +1,6 @@
 "use server";
 
-import { auth } from "../../../../auth";
+import { getSession } from "../../../../lib/auth/get-session";
 import { BeaverError } from "../../../../lib/beaver/errors";
 import { listShows as internalListShows } from "../../../../lib/beaver/shows/list-shows";
 import { errors } from "./constants";
@@ -10,7 +10,7 @@ import { ListShowsInput, ListShowsOutput } from "./types";
 export async function listShows(
   input: ListShowsInput,
 ): Promise<ListShowsOutput> {
-  const session = await auth.auth();
+  const { session } = await getSession();
   if (!session) return { error: errors.unauthorized };
 
   const parsed = inputSchema.safeParse(input);

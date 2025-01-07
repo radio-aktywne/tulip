@@ -13,9 +13,6 @@ You can configure the app at runtime using various environment variables:
 - `TULIP__SERVER__PORT` -
   port to run the server on
   (default: `10530`)
-- `TULIP__COOKIES__DOMAIN` -
-  domain for the cookies
-  (default: ``)
 - `TULIP__SECRETS__AUTH` -
   secrets for encrypting auth cookies
   (default: `secret`)

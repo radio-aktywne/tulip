@@ -1,6 +1,6 @@
 "use server";
 
-import { auth } from "../../../../auth";
+import { getSession } from "../../../../lib/auth/get-session";
 import { BeaverError } from "../../../../lib/beaver/errors";
 import {
   createEvent as internalCreateEvent,
@@ -13,7 +13,7 @@ import { CreateEventInput, CreateEventOutput } from "./types";
 export async function createEvent(
   input: CreateEventInput,
 ): Promise<CreateEventOutput> {
-  const session = await auth.auth();
+  const { session } = await getSession();
   if (!session) return { error: errors.unauthorized };
 
   const parsed = inputSchema.safeParse(input);
