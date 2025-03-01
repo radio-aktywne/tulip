@@ -15,14 +15,8 @@ export function useShowForm({
 }: UseShowFormInput): UseShowFormOutput {
   const form = useForm<UseShowFormValues>({
     initialValues: {
-      description:
-        initialValues?.description === undefined
-          ? defaultValues.description
-          : initialValues.description,
-      title:
-        initialValues?.title === undefined
-          ? defaultValues.title
-          : initialValues.title,
+      description: initialValues?.description ?? defaultValues.description,
+      title: initialValues?.title ?? defaultValues.title,
     },
     validate: validate,
   });
