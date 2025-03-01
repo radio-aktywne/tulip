@@ -1,6 +1,6 @@
 "use client";
 
-import { msg } from "@lingui/macro";
+import { msg } from "@lingui/core/macro";
 import { useLingui } from "@lingui/react";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect } from "react";
@@ -35,8 +35,8 @@ export function EventWidget({ event: prefetchedEvent }: EventWidgetInput) {
       event.recurrence?.rule?.count != null
         ? ("after" as const)
         : event.recurrence?.rule?.until != null
-        ? ("on" as const)
-        : ("never" as const),
+          ? ("on" as const)
+          : ("never" as const),
     frequency:
       event.recurrence?.rule?.frequency === "daily" ||
       event.recurrence?.rule?.frequency === "weekly" ||
@@ -126,8 +126,8 @@ export function EventWidget({ event: prefetchedEvent }: EventWidgetInput) {
                 },
               }
             : data.recurring === "no"
-            ? null
-            : undefined,
+              ? null
+              : undefined,
         show: data.show,
         start: formatDatetime(data.start),
         timezone: data.timezone,

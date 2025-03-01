@@ -16,50 +16,17 @@ export function useEventForm({
 }: UseEventFormInput): UseEventFormOutput {
   const form = useForm<UseEventFormValues>({
     initialValues: {
-      count:
-        initialValues?.count === undefined
-          ? defaultValues.count
-          : initialValues.count,
-      end:
-        initialValues?.end === undefined
-          ? defaultValues.end
-          : initialValues.end,
-      ends:
-        initialValues?.ends === undefined
-          ? defaultValues.ends
-          : initialValues.ends,
-      frequency:
-        initialValues?.frequency === undefined
-          ? defaultValues.frequency
-          : initialValues.frequency,
-      interval:
-        initialValues?.interval === undefined
-          ? defaultValues.interval
-          : initialValues.interval,
-      recurring:
-        initialValues?.recurring === undefined
-          ? defaultValues.recurring
-          : initialValues.recurring,
-      show:
-        initialValues?.show === undefined
-          ? defaultValues.show
-          : initialValues.show,
-      start:
-        initialValues?.start === undefined
-          ? defaultValues.start
-          : initialValues.start,
-      timezone:
-        initialValues?.timezone === undefined
-          ? defaultValues.timezone
-          : initialValues.timezone,
-      type:
-        initialValues?.type === undefined
-          ? defaultValues.type
-          : initialValues.type,
-      until:
-        initialValues?.until === undefined
-          ? defaultValues.until
-          : initialValues.until,
+      count: initialValues?.count ?? defaultValues.count,
+      end: initialValues?.end ?? defaultValues.end,
+      ends: initialValues?.ends ?? defaultValues.ends,
+      frequency: initialValues?.frequency ?? defaultValues.frequency,
+      interval: initialValues?.interval ?? defaultValues.interval,
+      recurring: initialValues?.recurring ?? defaultValues.recurring,
+      show: initialValues?.show ?? defaultValues.show,
+      start: initialValues?.start ?? defaultValues.start,
+      timezone: initialValues?.timezone ?? defaultValues.timezone,
+      type: initialValues?.type ?? defaultValues.type,
+      until: initialValues?.until ?? defaultValues.until,
     },
     validate: validate,
   });

@@ -1,6 +1,6 @@
 "use client";
 
-import { msg } from "@lingui/macro";
+import { msg } from "@lingui/core/macro";
 import { useLingui } from "@lingui/react";
 import { useRouter } from "next/navigation";
 import { useCallback } from "react";
@@ -87,8 +87,8 @@ export function NewEventWidget({}: NewEventWidgetInput) {
                 },
               }
             : data.recurring === "no"
-            ? null
-            : undefined,
+              ? null
+              : undefined,
         show: data.show,
         start: formatDatetime(data.start),
         timezone: data.timezone,

@@ -1,5 +1,5 @@
 import { i18n } from "@lingui/core";
-import { msg, t } from "@lingui/macro";
+import { msg } from "@lingui/core/macro";
 import { Metadata } from "next";
 
 import { ShowListPageMetadata } from "../../../components/metadata/shows/show-list-page-metadata";
@@ -15,8 +15,8 @@ export async function generateMetadata(): Promise<Metadata> {
   await loadLocale({ i18n, language });
 
   return {
-    description: t(i18n)(msg({ message: "tulip" })),
-    title: t(i18n)(msg({ message: "Shows • tulip" })),
+    description: i18n._(msg({ message: "tulip" })),
+    title: i18n._(msg({ message: "Shows • tulip" })),
   };
 }
 

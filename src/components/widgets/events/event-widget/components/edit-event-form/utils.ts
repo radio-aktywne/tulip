@@ -1,4 +1,4 @@
-import { msg, plural } from "@lingui/macro";
+import { msg, plural } from "@lingui/core/macro";
 
 import { UseEventFormAllowedValues } from "../../../../../../hooks/forms/use-event-form";
 

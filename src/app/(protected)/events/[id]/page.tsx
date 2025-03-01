@@ -1,5 +1,5 @@
 import { i18n } from "@lingui/core";
-import { msg, t } from "@lingui/macro";
+import { msg } from "@lingui/core/macro";
 import { Metadata } from "next";
 
 import { EventPageMetadata } from "../../../../components/metadata/events/event-page-metadata";
@@ -19,8 +19,8 @@ export async function generateMetadata({
   await loadLocale({ i18n, language });
 
   return {
-    description: t(i18n)(msg({ message: "tulip" })),
-    title: t(i18n)(msg({ message: `Event ${id} • tulip` })),
+    description: i18n._(msg({ message: "tulip" })),
+    title: i18n._(msg({ message: `Event ${id} • tulip` })),
   };
 }
 

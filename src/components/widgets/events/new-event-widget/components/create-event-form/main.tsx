@@ -1,6 +1,6 @@
 "use client";
 
-import { msg, plural } from "@lingui/macro";
+import { msg, plural } from "@lingui/core/macro";
 import { useLingui } from "@lingui/react";
 import {
   Button,
