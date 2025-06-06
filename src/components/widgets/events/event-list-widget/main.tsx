@@ -2,32 +2,32 @@
 
 import { msg } from "@lingui/core/macro";
 import { useLingui } from "@lingui/react";
-import { Button, Center, Pagination, Stack, Title } from "@mantine/core";
+import {
+  ActionIcon,
+  Center,
+  Group,
+  Stack,
+  Title,
+  UnstyledButton,
+} from "@mantine/core";
+import { List, ListItem } from "@radio-aktywne/ui";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { MdAddCircleOutline } from "react-icons/md";
 
 import { useListEvents } from "../../../../hooks/beaver/events/use-list-events";
 import { useToasts } from "../../../../hooks/use-toasts";
-import { EventTile } from "./components/event-tile";
+import { EventItem } from "./components/event-item";
 import { EventListWidgetInput } from "./types";
 
 export function EventListWidget({
   events: prefetchedEvents,
-  perPage = 5,
   where,
 }: EventListWidgetInput) {
-  const [page, setPage] = useState(1);
-
   const { _ } = useLingui();
   const toasts = useToasts();
 
-  const limit = perPage;
-  const offset = perPage * (page - 1);
-  const { data: currentEvents, error } = useListEvents({
-    limit: limit,
-    offset: offset,
-    where: where,
-  });
+  const { data: currentEvents, error } = useListEvents({ where: where });
   const events = currentEvents ?? prefetchedEvents;
 
   useEffect(() => {
@@ -38,23 +38,30 @@ export function EventListWidget({
     return <Title>{_(msg({ message: "No events." }))}</Title>;
   }
 
-  const pages = Math.ceil(events.count / perPage);
-
   return (
-    <Stack>
-      <Stack>
-        {events.events.map((event) => (
-          <EventTile event={event} key={event.id} />
-        ))}
-      </Stack>
+    <Stack mah="100%" w="100%">
       <Center>
-        <Stack>
-          <Pagination onChange={setPage} total={pages} value={page} withEdges />
-          <Button component={Link} href={"/events/new"}>
-            {_(msg({ message: "Create" }))}
-          </Button>
-        </Stack>
+        <Group>
+          <Title>{_(msg({ message: "Events" }))}</Title>
+          <ActionIcon
+            component={Link}
+            href={`/events/new`}
+            size="auto"
+            variant="transparent"
+          >
+            <MdAddCircleOutline size="2em" />
+          </ActionIcon>
+        </Group>
       </Center>
+      <List style={{ overflowY: "auto" }}>
+        {events.events.map((event) => (
+          <ListItem key={event.id}>
+            <UnstyledButton component={Link} href={`/events/${event.id}`}>
+              <EventItem event={event} />
+            </UnstyledButton>
+          </ListItem>
+        ))}
+      </List>
     </Stack>
   );
 }

@@ -1,9 +1,7 @@
 import { useForm } from "@mantine/form";
 import "client-only";
-import { useMemo } from "react";
 
-import { useListShows } from "../../beaver/shows/use-list-shows";
-import { defaultValues, showsLimit, staticChoiceValues } from "./constants";
+import { defaultValues } from "./constants";
 import {
   UseEventFormInput,
   UseEventFormOutput,
@@ -31,26 +29,5 @@ export function useEventForm({
     validate: validate,
   });
 
-  const { data: shows, loading: showsLoading } = useListShows({
-    limit: showsLimit,
-  });
-
-  const allowedValues = useMemo(
-    () => ({
-      ends: staticChoiceValues.ends,
-      frequency: staticChoiceValues.frequency,
-      recurring: staticChoiceValues.recurring,
-      show: shows?.shows.map((s) => s.id) ?? [],
-      timezone: staticChoiceValues.timezone,
-      type: staticChoiceValues.type,
-    }),
-    [shows],
-  );
-
-  return {
-    allowedValues,
-    defaultValues,
-    form,
-    loading: showsLoading,
-  };
+  return { defaultValues, form };
 }

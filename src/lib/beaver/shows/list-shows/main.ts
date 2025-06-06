@@ -10,7 +10,7 @@ export async function listShows({
   offset,
   order,
   where,
-}: ListShowsInput): Promise<ListShowsOutput> {
+}: ListShowsInput = {}): Promise<ListShowsOutput> {
   const { data, error, response } = await beaver.GET("/shows", {
     params: {
       query: {

@@ -1,27 +1,16 @@
 import { UseFormReturnType } from "@mantine/form";
 
-import { staticChoiceValues } from "./constants";
-
-export type UseEventFormAllowedValues = {
-  ends: typeof staticChoiceValues.ends;
-  frequency: typeof staticChoiceValues.frequency;
-  recurring: typeof staticChoiceValues.recurring;
-  show: string[];
-  timezone: typeof staticChoiceValues.timezone;
-  type: typeof staticChoiceValues.type;
-};
-
 export type UseEventFormValues = {
   count: number | undefined;
   end: Date | undefined;
-  ends: undefined | UseEventFormAllowedValues["ends"][number];
-  frequency: undefined | UseEventFormAllowedValues["frequency"][number];
+  ends: "after" | "never" | "on" | undefined;
+  frequency: "daily" | "monthly" | "weekly" | "yearly" | undefined;
   interval: number | undefined;
-  recurring: undefined | UseEventFormAllowedValues["recurring"][number];
+  recurring: "no" | "yes" | undefined;
   show: string | undefined;
   start: Date | undefined;
-  timezone: undefined | UseEventFormAllowedValues["timezone"][number];
-  type: undefined | UseEventFormAllowedValues["type"][number];
+  timezone: string | undefined;
+  type: "live" | "prerecorded" | "replay" | undefined;
   until: Date | undefined;
 };
 
@@ -41,8 +30,6 @@ export type UseEventFormInput = {
 };
 
 export type UseEventFormOutput = {
-  allowedValues: UseEventFormAllowedValues;
   defaultValues: UseEventFormDefaultValues;
   form: UseFormReturnType<UseEventFormValues>;
-  loading: boolean;
 };

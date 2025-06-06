@@ -2,32 +2,32 @@
 
 import { msg } from "@lingui/core/macro";
 import { useLingui } from "@lingui/react";
-import { Button, Center, Pagination, Stack, Title } from "@mantine/core";
+import {
+  ActionIcon,
+  Center,
+  Group,
+  Stack,
+  Title,
+  UnstyledButton,
+} from "@mantine/core";
+import { List, ListItem } from "@radio-aktywne/ui";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { MdAddCircleOutline } from "react-icons/md";
 
 import { useListShows } from "../../../../hooks/beaver/shows/use-list-shows";
 import { useToasts } from "../../../../hooks/use-toasts";
-import { ShowTile } from "./components/show-tile";
+import { ShowItem } from "./components/show-item";
 import { ShowListWidgetInput } from "./types";
 
 export function ShowListWidget({
-  perPage = 5,
   shows: prefetchedShows,
   where,
 }: ShowListWidgetInput) {
-  const [page, setPage] = useState(1);
-
   const { _ } = useLingui();
   const toasts = useToasts();
 
-  const limit = perPage;
-  const offset = perPage * (page - 1);
-  const { data: currentShows, error } = useListShows({
-    limit: limit,
-    offset: offset,
-    where: where,
-  });
+  const { data: currentShows, error } = useListShows({ where: where });
   const shows = currentShows ?? prefetchedShows;
 
   useEffect(() => {
@@ -38,23 +38,30 @@ export function ShowListWidget({
     return <Title>{_(msg({ message: "No shows." }))}</Title>;
   }
 
-  const pages = Math.ceil(shows.count / perPage);
-
   return (
-    <Stack>
-      <Stack>
-        {shows.shows.map((show) => (
-          <ShowTile key={show.id} show={show} />
-        ))}
-      </Stack>
+    <Stack mah="100%" w="100%">
       <Center>
-        <Stack>
-          <Pagination onChange={setPage} total={pages} value={page} withEdges />
-          <Button component={Link} href={"/shows/new"}>
-            {_(msg({ message: "Create" }))}
-          </Button>
-        </Stack>
+        <Group>
+          <Title>{_(msg({ message: "Shows" }))}</Title>
+          <ActionIcon
+            component={Link}
+            href={`/shows/new`}
+            size="auto"
+            variant="transparent"
+          >
+            <MdAddCircleOutline size="2em" />
+          </ActionIcon>
+        </Group>
       </Center>
+      <List style={{ overflowY: "auto" }}>
+        {shows.shows.map((show) => (
+          <ListItem key={show.id}>
+            <UnstyledButton component={Link} href={`/shows/${show.id}`}>
+              <ShowItem show={show} />
+            </UnstyledButton>
+          </ListItem>
+        ))}
+      </List>
     </Stack>
   );
 }

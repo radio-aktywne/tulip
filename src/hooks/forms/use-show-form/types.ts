@@ -1,9 +1,5 @@
 import { UseFormReturnType } from "@mantine/form";
 
-export type UseShowFormAllowedValues = {
-  [key: string]: never;
-};
-
 export type UseShowFormValues = {
   description: string | undefined;
   title: string | undefined;
@@ -25,8 +21,6 @@ export type UseShowFormInput = {
 };
 
 export type UseShowFormOutput = {
-  allowedValues: UseShowFormAllowedValues;
   defaultValues: UseShowFormDefaultValues;
   form: UseFormReturnType<UseShowFormValues>;
-  loading: boolean;
 };

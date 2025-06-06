@@ -2,7 +2,7 @@
 
 import { msg } from "@lingui/core/macro";
 import { useLingui } from "@lingui/react";
-import { Button, Loader, Stack, TextInput } from "@mantine/core";
+import { Button, Stack, TextInput } from "@mantine/core";
 import { useCallback, useState } from "react";
 
 import {
@@ -21,7 +21,7 @@ export function EditShowForm({
 
   const { _ } = useLingui();
 
-  const { form, loading } = useShowForm({
+  const { form } = useShowForm({
     initialValues: initialData,
     validate: validate,
   });
@@ -40,8 +40,6 @@ export function EditShowForm({
     },
     [formSetErrors, onSave],
   );
-
-  if (loading) return <Loader />;
 
   return (
     <form onSubmit={form.onSubmit(handleSave)}>
