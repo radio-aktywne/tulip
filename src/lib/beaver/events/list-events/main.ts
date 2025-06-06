@@ -11,7 +11,7 @@ export async function listEvents({
   order,
   query,
   where,
-}: ListEventsInput): Promise<ListEventsOutput> {
+}: ListEventsInput = {}): Promise<ListEventsOutput> {
   const { data, error, response } = await beaver.GET("/events", {
     params: {
       query: {

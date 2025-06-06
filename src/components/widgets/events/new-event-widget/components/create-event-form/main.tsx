@@ -16,10 +16,12 @@ import { DatesProvider, DateTimePicker } from "@mantine/dates";
 import { useCallback, useState } from "react";
 
 import { datetimeDisplayFormat } from "../../../../../../constants";
+import { useListShows } from "../../../../../../hooks/beaver/shows/use-list-shows";
 import {
   useEventForm,
   UseEventFormValues,
 } from "../../../../../../hooks/forms/use-event-form";
+import { staticChoiceValues } from "./constants";
 import { CreateEventFormInput } from "./types";
 import {
   getEndsLabel,
@@ -35,9 +37,9 @@ export function CreateEventForm({ onCreate, validate }: CreateEventFormInput) {
 
   const { _ } = useLingui();
 
-  const { allowedValues, form, loading } = useEventForm({
-    validate: validate,
-  });
+  const { data: shows, loading: showsLoading } = useListShows();
+
+  const { form } = useEventForm({ validate: validate });
 
   const formSetErrors = form.setErrors;
 
@@ -54,37 +56,37 @@ export function CreateEventForm({ onCreate, validate }: CreateEventFormInput) {
     [formSetErrors, onCreate],
   );
 
-  if (loading) return <Loader />;
+  if (showsLoading) return <Loader />;
 
   const interval = form.getValues().interval ?? 0;
   const count = form.getValues().count ?? 0;
 
-  const typeSelectData = allowedValues.type.map((value) => ({
+  const typeSelectData = staticChoiceValues.type.map((value) => ({
     label: _(getTypeLabel(value)),
     value: value,
   }));
 
-  const showSelectData = allowedValues.show.map((value) => ({
-    label: _(getShowLabel(value)),
-    value: value,
+  const showSelectData = shows?.shows.map((show) => ({
+    label: _(getShowLabel(show)),
+    value: show.id,
   }));
 
-  const timezoneSelectData = allowedValues.timezone.map((value) => ({
+  const timezoneSelectData = staticChoiceValues.timezone.map((value) => ({
     label: _(getTimezoneLabel(value)),
     value: value,
   }));
 
-  const recurringSelectData = allowedValues.recurring.map((value) => ({
+  const recurringSelectData = staticChoiceValues.recurring.map((value) => ({
     label: _(getRecurringLabel(value)),
     value: value,
   }));
 
-  const frequencySelectData = allowedValues.frequency.map((value) => ({
+  const frequencySelectData = staticChoiceValues.frequency.map((value) => ({
     label: _(getFrequencyLabel(value, interval)),
     value: value,
   }));
 
-  const endsSelectData = allowedValues.ends.map((value) => ({
+  const endsSelectData = staticChoiceValues.ends.map((value) => ({
     label: _(getEndsLabel(value)),
     value: value,
   }));

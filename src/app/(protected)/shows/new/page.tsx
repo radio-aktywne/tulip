@@ -2,8 +2,8 @@ import { i18n } from "@lingui/core";
 import { msg } from "@lingui/core/macro";
 import { Metadata } from "next";
 
-import { NewShowPageMetadata } from "../../../../components/metadata/shows/new-show-page-metadata";
-import { NewShowPageView } from "../../../../components/views/shows/new-show-page-view";
+import { NewShowPageMetadata } from "../../../../components/metadata/shows/new/new-show-page-metadata";
+import { NewShowPageView } from "../../../../components/views/shows/new/new-show-page-view";
 import { getLanguage } from "../../../../lib/i18n/get-language";
 import { loadLocale } from "../../../../lib/i18n/load-locale";
 import { NewShowPageInput } from "./types";

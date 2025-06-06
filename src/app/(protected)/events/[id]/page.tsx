@@ -2,8 +2,8 @@ import { i18n } from "@lingui/core";
 import { msg } from "@lingui/core/macro";
 import { Metadata } from "next";
 
-import { EventPageMetadata } from "../../../../components/metadata/events/event-page-metadata";
-import { EventPageView } from "../../../../components/views/events/event-page-view";
+import { EventPageMetadata } from "../../../../components/metadata/events/event/event-page-metadata";
+import { EventPageView } from "../../../../components/views/events/event/event-page-view";
 import { getLanguage } from "../../../../lib/i18n/get-language";
 import { loadLocale } from "../../../../lib/i18n/load-locale";
 import { EventPageInput } from "./types";

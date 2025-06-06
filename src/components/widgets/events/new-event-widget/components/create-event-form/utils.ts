@@ -1,8 +1,11 @@
 import { msg, plural } from "@lingui/core/macro";
 
-import { UseEventFormAllowedValues } from "../../../../../../hooks/forms/use-event-form";
+import { UseListShowsSuccessState } from "../../../../../../hooks/beaver/shows/use-list-shows/types";
+import { staticChoiceValues } from "./constants";
 
-export function getTypeLabel(value: UseEventFormAllowedValues["type"][number]) {
+export function getTypeLabel(
+  value: (typeof staticChoiceValues)["type"][number],
+) {
   switch (value) {
     case "live":
       return msg({ message: "Live" });
@@ -13,8 +16,10 @@ export function getTypeLabel(value: UseEventFormAllowedValues["type"][number]) {
   }
 }
 
-export function getShowLabel(value: string) {
-  return value;
+export function getShowLabel(
+  show: UseListShowsSuccessState["data"]["shows"][number],
+) {
+  return show.title;
 }
 
 export function getTimezoneLabel(value: string) {
@@ -22,7 +27,7 @@ export function getTimezoneLabel(value: string) {
 }
 
 export function getRecurringLabel(
-  value: UseEventFormAllowedValues["recurring"][number],
+  value: (typeof staticChoiceValues)["recurring"][number],
 ) {
   switch (value) {
     case "no":
@@ -33,7 +38,7 @@ export function getRecurringLabel(
 }
 
 export function getFrequencyLabel(
-  value: UseEventFormAllowedValues["frequency"][number],
+  value: (typeof staticChoiceValues)["frequency"][number],
   interval: number,
 ) {
   switch (value) {
@@ -56,7 +61,9 @@ export function getFrequencyLabel(
   }
 }
 
-export function getEndsLabel(value: UseEventFormAllowedValues["ends"][number]) {
+export function getEndsLabel(
+  value: (typeof staticChoiceValues)["ends"][number],
+) {
   switch (value) {
     case "after":
       return msg({ message: "After" });
