@@ -10,6 +10,7 @@ export async function getShow({
   include,
 }: GetShowInput): Promise<GetShowOutput> {
   const { data, error, response } = await beaver.GET("/shows/{id}", {
+    cache: "no-store",
     params: {
       path: { id: id },
       query: { include: include },
