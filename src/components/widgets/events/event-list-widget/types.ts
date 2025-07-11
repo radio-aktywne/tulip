@@ -5,5 +5,4 @@ import {
 
 export type EventListWidgetInput = {
   events: ListEventsOutput["events"];
-  where?: ListEventsInput["where"];
-};
+} & ListEventsInput;

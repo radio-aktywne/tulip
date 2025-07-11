@@ -1,3 +1,5 @@
+import { ListShowsOutput } from "../../../../lib/beaver/shows/list-shows";
+
 export type NewEventWidgetInput = {
-  [key: string]: never;
+  shows: ListShowsOutput["shows"];
 };
