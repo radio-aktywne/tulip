@@ -6,7 +6,6 @@ import {
   Button,
   Group,
   InputWrapper,
-  Loader,
   NumberInput,
   Select,
   Stack,
@@ -15,13 +14,11 @@ import {
 import { DatesProvider, DateTimePicker } from "@mantine/dates";
 import { useCallback, useState } from "react";
 
-import { datetimeDisplayFormat } from "../../../../../../constants";
-import { useListShows } from "../../../../../../hooks/beaver/shows/use-list-shows";
 import {
   useEventForm,
   UseEventFormValues,
 } from "../../../../../../hooks/forms/use-event-form";
-import { staticChoiceValues } from "./constants";
+import { datetimeDisplayFormat, staticChoiceValues } from "./constants";
 import { CreateEventFormInput } from "./types";
 import {
   getEndsLabel,
@@ -32,12 +29,14 @@ import {
   getTypeLabel,
 } from "./utils";
 
-export function CreateEventForm({ onCreate, validate }: CreateEventFormInput) {
+export function CreateEventForm({
+  onCreate,
+  shows,
+  validate,
+}: CreateEventFormInput) {
   const [creating, setCreating] = useState(false);
 
   const { _ } = useLingui();
-
-  const { data: shows, loading: showsLoading } = useListShows();
 
   const { form } = useEventForm({ validate: validate });
 
@@ -55,8 +54,6 @@ export function CreateEventForm({ onCreate, validate }: CreateEventFormInput) {
     },
     [formSetErrors, onCreate],
   );
-
-  if (showsLoading) return <Loader />;
 
   const interval = form.getValues().interval ?? 0;
   const count = form.getValues().count ?? 0;

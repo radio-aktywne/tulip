@@ -27,7 +27,7 @@ export function useGetEvent({
   useEffect(() => {
     start();
     return stop;
-  }, [start, stop]);
+  }, []);
 
   return useMemo(() => ({ ...state, refresh }), [state, refresh]);
 }

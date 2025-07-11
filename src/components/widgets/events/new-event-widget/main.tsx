@@ -2,6 +2,7 @@
 
 import { msg } from "@lingui/core/macro";
 import { useLingui } from "@lingui/react";
+import { Stack } from "@mantine/core";
 import { useRouter } from "next/navigation";
 import { useCallback } from "react";
 
@@ -17,7 +18,7 @@ import {
 import { NewEventWidgetInput } from "./types";
 import { formatDatetime } from "./utils";
 
-export function NewEventWidget({}: NewEventWidgetInput) {
+export function NewEventWidget({ shows }: NewEventWidgetInput) {
   const router = useRouter();
 
   const { _ } = useLingui();
@@ -25,17 +26,29 @@ export function NewEventWidget({}: NewEventWidgetInput) {
 
   const handleCreateAfterValidation = useCallback(
     async (input: CreateEventInput) => {
-      const { data: event, error: createError } = await createEvent(input);
+      const { error: createError } = await createEvent(input);
 
       if (createError) {
         const translated = _(createError);
         toasts.error(translated);
         router.refresh();
-        return { show: translated };
+        return {
+          count: translated,
+          end: translated,
+          ends: translated,
+          frequency: translated,
+          interval: translated,
+          recurring: translated,
+          show: translated,
+          start: translated,
+          timezone: translated,
+          type: translated,
+          until: translated,
+        };
       }
 
       toasts.success(_(msg({ message: "Event created successfully" })));
-      router.push(`/events/${event.id}`);
+      router.push(`/events`);
     },
     [_, router, toasts],
   );
@@ -98,5 +111,9 @@ export function NewEventWidget({}: NewEventWidgetInput) {
     [_, handleCreateAfterValidation],
   );
 
-  return <CreateEventForm onCreate={handleCreate} />;
+  return (
+    <Stack align="center">
+      <CreateEventForm onCreate={handleCreate} shows={shows} />
+    </Stack>
+  );
 }
