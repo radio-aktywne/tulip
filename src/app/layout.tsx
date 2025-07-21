@@ -43,7 +43,7 @@ export default async function RootLayout({ children }: RootLayoutInput) {
       <body>
         <I18nProvider>
           <ThemeProvider>
-            <PageLayout>{children}</PageLayout>
+            <PageLayout size="xl">{children}</PageLayout>
           </ThemeProvider>
         </I18nProvider>
       </body>
