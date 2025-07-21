@@ -1,3 +1,7 @@
+export type EventListPageSearchParams = {
+  current?: string;
+};
+
 export type EventListPageInput = {
-  [key: string]: never;
+  searchParams: EventListPageSearchParams;
 };

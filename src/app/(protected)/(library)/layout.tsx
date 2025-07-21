@@ -16,10 +16,12 @@ export default async function LibraryLayout({ children }: LibraryLayoutInput) {
 
   return (
     <MasterDetailLayout>
-      <MasterDetailLayoutMasterPanel>
+      <MasterDetailLayoutMasterPanel span={3}>
         <ShowsWidget include={include} shows={shows} />
       </MasterDetailLayoutMasterPanel>
-      <MasterDetailLayoutDetailPanel>{children}</MasterDetailLayoutDetailPanel>
+      <MasterDetailLayoutDetailPanel span={9}>
+        {children}
+      </MasterDetailLayoutDetailPanel>
     </MasterDetailLayout>
   );
 }
