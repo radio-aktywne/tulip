@@ -15,27 +15,74 @@ export function ShowsWidget({
   ...props
 }: ShowsWidgetInput) {
   const [state, setState] = useState<ShowsWidgetState>({ state: "display" });
+  const [page, setPage] = useState<number | undefined>(undefined);
+  const [query, setQuery] = useState<string | undefined>(undefined);
 
   const { _ } = useLingui();
   const toasts = useToasts();
 
-  const { data: currentShows, error, refresh } = useListShows(props);
+  const {
+    data: currentShows,
+    error,
+    refresh,
+  } = useListShows({
+    ...props,
+    offset: page ? (page - 1) * props.limit : undefined,
+    where: JSON.stringify({
+      ...(props.where ? JSON.parse(props.where) : {}),
+      ...(query
+        ? {
+            title: {
+              contains: query,
+              mode: "insensitive",
+            },
+          }
+        : {}),
+    }),
+  });
   const shows = currentShows ?? prefetchedShows;
 
   useEffect(() => {
     if (error) toasts.warning(_(error));
   }, [_, error, toasts]);
 
-  const handleCreateSwitch = useCallback(() => {
-    setState({ state: "create" });
-  }, []);
+  useEffect(() => {
+    if (shows === undefined || page === undefined) return;
 
-  const handleDelete = useCallback(() => {
+    const pages = Math.ceil(shows.count / props.limit);
+    if (page > pages) setPage(Math.max(1, pages));
+  }, [page, shows, props.limit]);
+
+  const handleCreateCreate = useCallback(() => {
+    setState({ state: "display" });
     void refresh();
   }, [refresh]);
 
-  const handleEdit = useCallback((show: (typeof shows)["shows"][number]) => {
-    setState({ show: show, state: "edit" });
+  const handleCreateCancel = useCallback(() => {
+    setState({ state: "display" });
+  }, []);
+
+  const handleDisplayCreate = useCallback(() => {
+    setState({ state: "create" });
+  }, []);
+
+  const handleDisplayDelete = useCallback(() => {
+    void refresh();
+  }, [refresh]);
+
+  const handleDisplayEdit = useCallback(
+    (show: (typeof shows)["shows"][number]) => {
+      setState({ show: show, state: "edit" });
+    },
+    [],
+  );
+
+  const handleDisplayPageChange = useCallback((page: number) => {
+    setPage(page);
+  }, []);
+
+  const handleDisplayQueryChange = useCallback((query: string) => {
+    setQuery(query);
   }, []);
 
   const handleEditSave = useCallback(() => {
@@ -47,30 +94,26 @@ export function ShowsWidget({
     setState({ state: "display" });
   }, []);
 
-  const handleCreate = useCallback(() => {
-    setState({ state: "display" });
-    void refresh();
-  }, [refresh]);
-
-  const handleCancelCreate = useCallback(() => {
-    setState({ state: "display" });
-  }, []);
-
   return (() => {
     switch (state.state) {
       case "create":
         return (
           <NewShowWidget
-            onCancel={handleCancelCreate}
-            onCreate={handleCreate}
+            onCancel={handleCreateCancel}
+            onCreate={handleCreateCreate}
           />
         );
       case "display":
         return (
           <ShowListWidget
-            onCreate={handleCreateSwitch}
-            onDelete={handleDelete}
-            onEdit={handleEdit}
+            onCreate={handleDisplayCreate}
+            onDelete={handleDisplayDelete}
+            onEdit={handleDisplayEdit}
+            onPageChange={handleDisplayPageChange}
+            onQueryChange={handleDisplayQueryChange}
+            page={page}
+            perPage={props.limit}
+            query={query}
             shows={shows}
           />
         );
