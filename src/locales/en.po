@@ -38,7 +38,7 @@ msgstr "{interval, plural, one {week} other {weeks}}"
 msgid "{interval, plural, one {year} other {years}}"
 msgstr "{interval, plural, one {year} other {years}}"
 
-#: src/components/widgets/events/event-list-widget/main.tsx:68
+#: src/components/widgets/events/event-list-widget/main.tsx:61
 msgid "Add"
 msgstr "Add"
 
@@ -106,7 +106,7 @@ msgstr "Cancel"
 msgid "Count is required"
 msgstr "Count is required"
 
-#: src/components/widgets/shows/shows-widget/components/show-list-widget/main.tsx:66
+#: src/components/widgets/shows/shows-widget/components/show-list-widget/main.tsx:115
 #: src/components/widgets/shows/shows-widget/components/new-show-widget/components/create-show-form/main.tsx:50
 #: src/components/widgets/events/new-event-widget/components/create-event-form/main.tsx:198
 msgid "Create"
@@ -238,9 +238,9 @@ msgstr "New event • tulip"
 msgid "No"
 msgstr "No"
 
-#: src/components/widgets/shows/shows-widget/components/show-list-widget/main.tsx:46
-msgid "No shows."
-msgstr "No shows."
+#: src/components/widgets/shows/shows-widget/components/show-list-widget/main.tsx:98
+msgid "No shows"
+msgstr "No shows"
 
 #: src/components/metadata/root/root-not-found-metadata/main.tsx:14
 msgid "Not Found • tulip"
@@ -284,6 +284,10 @@ msgstr "Retry"
 msgid "Save"
 msgstr "Save"
 
+#: src/components/widgets/shows/shows-widget/components/show-list-widget/main.tsx:78
+msgid "Search shows"
+msgstr "Search shows"
+
 #: src/components/widgets/events/new-event-widget/components/create-event-form/main.tsx:103
 #: src/components/widgets/events/edit-event-widget/components/edit-event-form/main.tsx:107
 msgid "Show"
@@ -293,7 +297,7 @@ msgstr "Show"
 msgid "Show created successfully"
 msgstr "Show created successfully"
 
-#: src/components/widgets/shows/shows-widget/components/show-list-widget/main.tsx:28
+#: src/components/widgets/shows/shows-widget/components/show-list-widget/main.tsx:44
 msgid "Show deleted."
 msgstr "Show deleted."
 
@@ -312,7 +316,7 @@ msgstr "Show not found."
 msgid "Show updated successfully"
 msgstr "Show updated successfully"
 
-#: src/components/widgets/shows/shows-widget/components/show-list-widget/main.tsx:51
+#: src/components/widgets/shows/shows-widget/components/show-list-widget/main.tsx:72
 msgid "Shows"
 msgstr "Shows"
 

@@ -21,6 +21,10 @@ export function useListSchedules({
 }: UseListSchedulesInput = {}): UseListSchedulesOutput {
   const [state, setState] = useState<UseListSchedulesState>({ loading: true });
 
+  useEffect(() => {
+    setState({ loading: true });
+  }, [rangeEnd, include, limit, offset, order, rangeStart, where]);
+
   const refresh = useCallback(async () => {
     const { data, error } = await listSchedules({
       end: rangeEnd,
