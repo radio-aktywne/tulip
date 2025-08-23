@@ -9,5 +9,5 @@ export type ShowListWidgetInput = {
   page?: number;
   perPage: number;
   query?: string;
-  shows: ListShowsOutput["shows"];
+  shows?: ListShowsOutput["shows"];
 };

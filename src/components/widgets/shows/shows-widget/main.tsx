@@ -15,8 +15,8 @@ export function ShowsWidget({
   ...props
 }: ShowsWidgetInput) {
   const [state, setState] = useState<ShowsWidgetState>({ state: "display" });
-  const [page, setPage] = useState<number | undefined>(undefined);
-  const [query, setQuery] = useState<string | undefined>(undefined);
+  const [page, setPage] = useState<number>();
+  const [query, setQuery] = useState<string>();
 
   const { _ } = useLingui();
   const toasts = useToasts();
@@ -40,7 +40,7 @@ export function ShowsWidget({
         : {}),
     }),
   });
-  const shows = currentShows ?? prefetchedShows;
+  const shows = query ? currentShows : (currentShows ?? prefetchedShows);
 
   useEffect(() => {
     if (error) toasts.warning(_(error));
@@ -71,7 +71,7 @@ export function ShowsWidget({
   }, [refresh]);
 
   const handleDisplayEdit = useCallback(
-    (show: (typeof shows)["shows"][number]) => {
+    (show: NonNullable<typeof shows>["shows"][number]) => {
       setState({ show: show, state: "edit" });
     },
     [],
@@ -82,7 +82,8 @@ export function ShowsWidget({
   }, []);
 
   const handleDisplayQueryChange = useCallback((query: string) => {
-    setQuery(query);
+    setPage(1);
+    setQuery(query || undefined);
   }, []);
 
   const handleEditSave = useCallback(() => {

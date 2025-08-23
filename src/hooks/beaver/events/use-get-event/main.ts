@@ -12,6 +12,10 @@ export function useGetEvent({
 }: UseGetEventInput): UseGetEventOutput {
   const [state, setState] = useState<UseGetEventState>({ loading: true });
 
+  useEffect(() => {
+    setState({ loading: true });
+  }, [id, include]);
+
   const refresh = useCallback(async () => {
     const { data, error } = await getEvent({ id: id, include: include });
     if (error) setState({ error: error, loading: false });
