@@ -20,6 +20,10 @@ export function useListEvents({
 }: UseListEventsInput = {}): UseListEventsOutput {
   const [state, setState] = useState<UseListEventsState>({ loading: true });
 
+  useEffect(() => {
+    setState({ loading: true });
+  }, [include, limit, offset, order, query, where]);
+
   const refresh = useCallback(async () => {
     const { data, error } = await listEvents({
       include: include,

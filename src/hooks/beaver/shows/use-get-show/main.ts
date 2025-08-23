@@ -12,6 +12,10 @@ export function useGetShow({
 }: UseGetShowInput): UseGetShowOutput {
   const [state, setState] = useState<UseGetShowState>({ loading: true });
 
+  useEffect(() => {
+    setState({ loading: true });
+  }, [id, include]);
+
   const refresh = useCallback(async () => {
     const { data, error } = await getShow({ id: id, include: include });
     if (error) setState({ error: error, loading: false });

@@ -2,7 +2,7 @@ import { components } from "../../../../services/beaver";
 
 export type GetEventInput = {
   id: string;
-  include?: string;
+  include?: null | string;
 };
 
 export type GetEventOutput = {
