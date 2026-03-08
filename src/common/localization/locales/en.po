@@ -1,0 +1,427 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: tulip\n"
+"Language: en\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"MIME-Version: 1.0\n"
+"X-Generator: @lingui/cli\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#. placeholder {0}: values.recurrence.interval ?? 1
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:189
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:187
+msgid "{0, plural, one {day} other {days}}"
+msgstr "{0, plural, one {day} other {days}}"
+
+#. placeholder {0}: values.recurrence.interval ?? 1
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:211
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:209
+msgid "{0, plural, one {month} other {months}}"
+msgstr "{0, plural, one {month} other {months}}"
+
+#. placeholder {0}: values.recurrence.ending?.times ?? 1
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:295
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:293
+msgid "{0, plural, one {time} other {times}}"
+msgstr "{0, plural, one {time} other {times}}"
+
+#. placeholder {0}: values.recurrence.interval ?? 1
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:200
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:198
+msgid "{0, plural, one {week} other {weeks}}"
+msgstr "{0, plural, one {week} other {weeks}}"
+
+#. placeholder {0}: values.recurrence.interval ?? 1
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:222
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:220
+msgid "{0, plural, one {year} other {years}}"
+msgstr "{0, plural, one {year} other {years}}"
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:258
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:256
+msgid "After"
+msgstr "After"
+
+#: src/client/core/components/event-widget/main.tsx:187
+#: src/client/core/components/event-widget/main.tsx:227
+#: src/client/core/components/new-event-widget/main.tsx:265
+#: src/client/core/components/shows-widget/main.tsx:107
+#: src/client/core/components/shows-widget/main.tsx:227
+#: src/client/core/components/shows-widget/main.tsx:293
+#: src/client/test/components/test-widget/main.tsx:52
+msgid "An unexpected error occurred"
+msgstr "An unexpected error occurred"
+
+#: src/client/core/components/event-widget/main.tsx:314
+#: src/client/core/components/new-event-widget/main.tsx:312
+#: src/client/core/components/shows-widget/components/create-show-widget/main.tsx:58
+#: src/client/core/components/shows-widget/components/edit-show-widget/main.tsx:59
+msgid "Back"
+msgstr "Back"
+
+#: src/client/core/components/event-widget/main.tsx:179
+#: src/client/core/components/new-event-widget/main.tsx:257
+#: src/client/core/components/shows-widget/main.tsx:219
+#: src/client/core/components/shows-widget/main.tsx:285
+msgid "Conflicting input"
+msgstr "Conflicting input"
+
+#: src/client/core/components/list-events-widget/main.tsx:102
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:313
+#: src/client/core/components/shows-widget/components/create-show-widget/components/create-show-form/main.tsx:50
+#: src/client/core/components/shows-widget/components/display-shows-widget/main.tsx:67
+msgid "Create"
+msgstr "Create"
+
+#: src/client/core/components/new-event-widget/main.tsx:297
+msgid "Create event"
+msgstr "Create event"
+
+#: src/app/(root)/(events)/(master)/(detail)/events/new/page.tsx:20
+msgid "Create event • tulip"
+msgstr "Create event • tulip"
+
+#: src/client/core/components/shows-widget/components/create-show-widget/main.tsx:44
+msgid "Create show"
+msgstr "Create show"
+
+#: src/client/core/components/event-widget/main.tsx:304
+msgid "Delete"
+msgstr "Delete"
+
+#: src/client/core/components/shows-widget/components/create-show-widget/components/create-show-form/main.tsx:37
+#: src/client/core/components/shows-widget/components/edit-show-widget/components/edit-show-form/main.tsx:37
+msgid "Description"
+msgstr "Description"
+
+#: src/client/core/components/event-widget/main.tsx:289
+msgid "Edit event"
+msgstr "Edit event"
+
+#: src/client/core/components/shows-widget/components/edit-show-widget/main.tsx:45
+msgid "Edit show"
+msgstr "Edit show"
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:143
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:141
+msgid "End"
+msgstr "End"
+
+#: src/client/core/components/new-event-widget/main.tsx:58
+msgid "End time is required"
+msgstr "End time is required"
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:243
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:241
+msgid "Ends"
+msgstr "Ends"
+
+#: src/client/core/components/shows-widget/components/create-show-widget/components/create-show-form/main.tsx:39
+#: src/client/core/components/shows-widget/components/edit-show-widget/components/edit-show-form/main.tsx:39
+msgid "Enter show description"
+msgstr "Enter show description"
+
+#: src/client/core/components/shows-widget/components/create-show-widget/components/create-show-form/main.tsx:30
+#: src/client/core/components/shows-widget/components/edit-show-widget/components/edit-show-form/main.tsx:30
+msgid "Enter show title"
+msgstr "Enter show title"
+
+#: src/client/test/components/test-widget/components/test-form/main.tsx:25
+msgid "Enter some value"
+msgstr "Enter some value"
+
+#: src/isomorphic/notifications/hooks/use-notifications/main.ts:46
+msgid "Error"
+msgstr "Error"
+
+#: src/app/(root)/(events)/(master)/(detail)/error.tsx:11
+#: src/app/(root)/(events)/error.tsx:11
+#: src/app/(root)/(main)/error.tsx:11
+msgid "Error • tulip"
+msgstr "Error • tulip"
+
+#: src/app/(root)/(events)/(master)/(detail)/events/[id]/page.tsx:40
+msgid "Event {eventId} • tulip"
+msgstr "Event {eventId} • tulip"
+
+#: src/client/core/components/event-widget/main.tsx:219
+msgid "Event already deleted"
+msgstr "Event already deleted"
+
+#: src/client/core/components/new-event-widget/main.tsx:169
+msgid "Event created"
+msgstr "Event created"
+
+#: src/client/core/components/event-widget/main.tsx:235
+msgid "Event deleted"
+msgstr "Event deleted"
+
+#: src/client/core/components/event-widget/main.tsx:96
+msgid "Event updated"
+msgstr "Event updated"
+
+#: src/app/(root)/(events)/(master)/(detail)/events/page.tsx:20
+msgid "Events • tulip"
+msgstr "Events • tulip"
+
+#: src/isomorphic/notifications/hooks/use-notifications/main.ts:56
+msgid "Info"
+msgstr "Info"
+
+#: src/client/core/components/event-widget/main.tsx:55
+#: src/client/core/components/event-widget/main.tsx:137
+#: src/client/core/components/event-widget/main.tsx:206
+#: src/client/core/components/new-event-widget/main.tsx:39
+#: src/client/core/components/new-event-widget/main.tsx:44
+#: src/client/core/components/new-event-widget/main.tsx:49
+#: src/client/core/components/new-event-widget/main.tsx:57
+#: src/client/core/components/new-event-widget/main.tsx:65
+#: src/client/core/components/new-event-widget/main.tsx:80
+#: src/client/core/components/new-event-widget/main.tsx:92
+#: src/client/core/components/new-event-widget/main.tsx:108
+#: src/client/core/components/new-event-widget/main.tsx:124
+#: src/client/core/components/new-event-widget/main.tsx:211
+#: src/client/core/components/new-event-widget/main.tsx:283
+#: src/client/core/components/shows-widget/components/create-show-widget/main.tsx:38
+#: src/client/core/components/shows-widget/components/edit-show-widget/main.tsx:39
+#: src/client/core/components/shows-widget/main.tsx:194
+#: src/client/core/components/shows-widget/main.tsx:269
+#: src/client/test/components/test-widget/main.tsx:41
+#: src/client/test/components/test-widget/main.tsx:62
+msgid "Invalid input"
+msgstr "Invalid input"
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:88
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:87
+msgid "Live"
+msgstr "Live"
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:250
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:248
+msgid "Never"
+msgstr "Never"
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:158
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:156
+msgid "No"
+msgstr "No"
+
+#: src/client/core/components/shows-widget/components/display-shows-widget/main.tsx:52
+msgid "No shows"
+msgstr "No shows"
+
+#: src/app/(root)/(events)/(master)/(detail)/not-found.tsx:15
+#: src/app/(root)/(main)/not-found.tsx:15
+msgid "Not Found • tulip"
+msgstr "Not Found • tulip"
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:254
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:252
+msgid "On"
+msgstr "On"
+
+#: src/app/(root)/(events)/(master)/(detail)/not-found.view.tsx:8
+#: src/app/(root)/(main)/not-found.view.tsx:8
+msgid "Page not found"
+msgstr "Page not found"
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:92
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:91
+msgid "Prerecorded"
+msgstr "Prerecorded"
+
+#: src/client/core/components/event-widget/main.tsx:59
+#: src/client/core/components/new-event-widget/main.tsx:112
+msgid "Recurrence end date is required"
+msgstr "Recurrence end date is required"
+
+#: src/client/core/components/new-event-widget/main.tsx:128
+msgid "Recurrence end times is required"
+msgstr "Recurrence end times is required"
+
+#: src/client/core/components/new-event-widget/main.tsx:96
+msgid "Recurrence ending condition is required"
+msgstr "Recurrence ending condition is required"
+
+#: src/client/core/components/new-event-widget/main.tsx:69
+msgid "Recurrence frequency is required"
+msgstr "Recurrence frequency is required"
+
+#: src/client/core/components/new-event-widget/main.tsx:84
+msgid "Recurrence interval is required"
+msgstr "Recurrence interval is required"
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:163
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:161
+msgid "Recurring"
+msgstr "Recurring"
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:173
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:171
+msgid "Repeat every"
+msgstr "Repeat every"
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:96
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:95
+msgid "Replay"
+msgstr "Replay"
+
+#: src/isomorphic/core/components/generic/error-widget/main.tsx:21
+msgid "Retry"
+msgstr "Retry"
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:316
+#: src/client/core/components/shows-widget/components/edit-show-widget/components/edit-show-form/main.tsx:50
+msgid "Save"
+msgstr "Save"
+
+#: src/client/core/components/shows-widget/components/display-shows-widget/components/controls/main.tsx:30
+msgid "Search shows"
+msgstr "Search shows"
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:145
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:143
+msgid "Select end date and time"
+msgstr "Select end date and time"
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:264
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:262
+msgid "Select ending condition"
+msgstr "Select ending condition"
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:234
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:232
+msgid "Select frequency"
+msgstr "Select frequency"
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:165
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:163
+msgid "Select if the event is recurring"
+msgstr "Select if the event is recurring"
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:275
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:273
+msgid "Select recurrence end date and time"
+msgstr "Select recurrence end date and time"
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:114
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:112
+msgid "Select show"
+msgstr "Select show"
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:134
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:132
+msgid "Select start date and time"
+msgstr "Select start date and time"
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:125
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:123
+msgid "Select timezone"
+msgstr "Select timezone"
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:102
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:101
+msgid "Select type"
+msgstr "Select type"
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:113
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:111
+msgid "Show"
+msgstr "Show"
+
+#: src/client/core/components/shows-widget/main.tsx:101
+msgid "Show already deleted"
+msgstr "Show already deleted"
+
+#: src/client/core/components/shows-widget/main.tsx:256
+msgid "Show created"
+msgstr "Show created"
+
+#: src/client/core/components/shows-widget/main.tsx:112
+msgid "Show deleted"
+msgstr "Show deleted"
+
+#: src/client/core/components/new-event-widget/main.tsx:45
+msgid "Show is required"
+msgstr "Show is required"
+
+#: src/client/core/components/shows-widget/main.tsx:210
+msgid "Show no longer exists"
+msgstr "Show no longer exists"
+
+#: src/client/core/components/shows-widget/main.tsx:181
+msgid "Show updated"
+msgstr "Show updated"
+
+#: src/client/core/components/shows-widget/components/display-shows-widget/main.tsx:41
+msgid "Shows"
+msgstr "Shows"
+
+#: src/app/(root)/(events)/(master)/(detail)/error.view.tsx:10
+#: src/app/(root)/(events)/error.view.tsx:12
+#: src/app/(root)/(main)/error.view.tsx:10
+msgid "Something went wrong"
+msgstr "Something went wrong"
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:132
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:130
+msgid "Start"
+msgstr "Start"
+
+#: src/client/core/components/new-event-widget/main.tsx:52
+msgid "Start time is required"
+msgstr "Start time is required"
+
+#: src/client/test/components/test-widget/components/test-form/main.tsx:30
+msgid "Submit"
+msgstr "Submit"
+
+#: src/isomorphic/notifications/hooks/use-notifications/main.ts:66
+msgid "Success"
+msgstr "Success"
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:124
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:122
+msgid "Timezone"
+msgstr "Timezone"
+
+#: src/client/core/components/shows-widget/components/create-show-widget/components/create-show-form/main.tsx:28
+#: src/client/core/components/shows-widget/components/edit-show-widget/components/edit-show-form/main.tsx:28
+msgid "Title"
+msgstr "Title"
+
+#: src/app/(root)/layout.tsx:39
+msgid "tulip"
+msgstr "tulip"
+
+#: src/app/(root)/layout.tsx:33
+msgid "tulip is a Next.js app"
+msgstr "tulip is a Next.js app"
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:101
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:100
+msgid "Type"
+msgstr "Type"
+
+#: src/client/core/components/new-event-widget/main.tsx:40
+msgid "Type is required"
+msgstr "Type is required"
+
+#: src/isomorphic/notifications/hooks/use-notifications/main.ts:76
+msgid "Warning"
+msgstr "Warning"
+
+#: src/server/orpc/vars/procedures/vars/test/vars/validate/main.ts:27
+msgid "Why did the chicken cross the road? To get to the other side."
+msgstr "Why did the chicken cross the road? To get to the other side."
+
+#: src/client/core/components/event-widget/components/edit-event-form/main.tsx:154
+#: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:152
+msgid "Yes"
+msgstr "Yes"
