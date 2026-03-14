@@ -31,6 +31,12 @@ export async function EventsIdPageView({
     }
   })();
 
+  void queryClient.prefetchQuery(
+    orpcServerSideQueryClient.core.shows.list.queryOptions({
+      input: { limit: null },
+    }),
+  );
+
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
       <Hydrated fallback={<LoadingWidget />}>
