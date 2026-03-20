@@ -72,7 +72,7 @@ msgstr "Cofnij"
 msgid "Conflicting input"
 msgstr "Konfliktujące dane"
 
-#: src/client/core/components/list-events-widget/main.tsx:102
+#: src/client/core/components/list-events-widget/main.tsx:100
 #: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:313
 #: src/client/core/components/shows-widget/components/create-show-widget/components/create-show-form/main.tsx:50
 #: src/client/core/components/shows-widget/components/display-shows-widget/main.tsx:67

@@ -20,29 +20,27 @@ import { Controls } from "./components/controls";
 import { EventInstanceItem } from "./components/event-instance-item";
 
 export function ListEventsWidget({ date }: ListEventsWidgetInput) {
-  const { timestamp } = useNow();
-
-  const utcDate = useMemo(
-    () => (date ? dayjs.utc(date, "YYYY-MM-DD") : dayjs.utc()),
+  const parsedDate = useMemo(
+    () => (date ? dayjs(date, "YYYY-MM-DD") : dayjs()),
     [date],
   );
-  const utcNow = useMemo(() => dayjs.unix(timestamp).utc(), [timestamp]);
 
   const { localization } = useLocalization();
+  const { timestamp } = useNow();
 
-  const localDate = useMemo(
-    () => utcDate.locale(localization.locale).local(),
-    [localization.locale, utcDate],
+  const now = useMemo(
+    () => dayjs.unix(timestamp).locale(localization.locale).local(),
+    [localization.locale, timestamp],
   );
 
-  const localNow = useMemo(
-    () => utcNow.locale(localization.locale).local(),
-    [localization.locale, utcNow],
+  const localDate = useMemo(
+    () => parsedDate.locale(localization.locale).local(),
+    [localization.locale, parsedDate],
   );
 
   const scheduleListInput = useMemo(
     () => ({
-      end: utcDate
+      end: localDate
         .startOf("week")
         .add(1, "week")
         .add(1, "week")
@@ -51,14 +49,14 @@ export function ListEventsWidget({ date }: ListEventsWidgetInput) {
         .format("YYYY-MM-DDTHH:mm:ss"),
       include: { show: true },
       limit: null,
-      start: utcDate
+      start: localDate
         .startOf("week")
         .subtract(1, "week")
         .subtract(26, "hours")
         .utc()
         .format("YYYY-MM-DDTHH:mm:ss"),
     }),
-    [utcDate],
+    [localDate],
   );
 
   const scheduleListQuery = useQuery(
@@ -67,18 +65,18 @@ export function ListEventsWidget({ date }: ListEventsWidgetInput) {
     }),
   );
 
+  const scheduleList = scheduleListQuery.data as SetNonNullableDeep<
+    typeof scheduleListQuery.data,
+    "schedules.0.event.show"
+  >;
+
   return (
     <Stack align="center" h="100%" justify="space-between" w="100%">
       <Controls date={localDate} />
       <Box style={{ overflow: "auto" }} w="100%">
-        {scheduleListQuery.data ? (
-          <Calendar current={localDate} now={localNow}>
-            {(
-              scheduleListQuery.data as SetNonNullableDeep<
-                typeof scheduleListQuery.data,
-                "schedules.0.event.show"
-              >
-            ).schedules.flatMap((schedule, i) =>
+        {scheduleList ? (
+          <Calendar current={localDate} now={now}>
+            {scheduleList.schedules.flatMap((schedule, i) =>
               schedule.instances.map((instance, j) => (
                 <EventInstanceItem
                   current={localDate}
