@@ -6,7 +6,7 @@ import { GlobalErrorView } from "./global-error.view";
 import "./styles.css";
 
 function getDescription({}: ErrorMetadataUtilityInput = {}) {
-  return "tulip is a Next.js app";
+  return "Broadcast shows app 🎭";
 }
 
 function getTitle({}: ErrorMetadataUtilityInput = {}) {

@@ -65,6 +65,10 @@ msgstr "An unexpected error occurred"
 msgid "Back"
 msgstr "Back"
 
+#: src/app/(root)/layout.tsx:33
+msgid "Broadcast shows app 🎭"
+msgstr "Broadcast shows app 🎭"
+
 #: src/client/core/components/event-widget/main.tsx:179
 #: src/client/core/components/new-event-widget/main.tsx:257
 #: src/client/core/components/shows-widget/main.tsx:219
@@ -399,10 +403,6 @@ msgstr "Title"
 #: src/app/(root)/layout.tsx:39
 msgid "tulip"
 msgstr "tulip"
-
-#: src/app/(root)/layout.tsx:33
-msgid "tulip is a Next.js app"
-msgstr "tulip is a Next.js app"
 
 #: src/client/core/components/event-widget/components/edit-event-form/main.tsx:101
 #: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:100
