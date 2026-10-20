@@ -47,7 +47,7 @@ export function CreateShowWidget({ onBack, onCreate }: CreateShowWidgetInput) {
         disabled={creating}
         onClick={onBack}
         style={{ flexShrink: 0 }}
-        variant="light"
+        variant="default"
       >
         {localization.localize(msg({ message: "Back" }))}
       </Button>

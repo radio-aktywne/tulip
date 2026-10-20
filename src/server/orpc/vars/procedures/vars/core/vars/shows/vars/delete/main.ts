@@ -11,7 +11,7 @@ export const delete_ = orpcServerRootBase.core.shows.delete
       await state.current.apis.beaver.showsIdDelete({ path: { id: id } });
 
     if (showsIdDeleteData === undefined) {
-      if (showsIdDeleteResponse.status === 404) throw errors.NOT_FOUND();
+      if (showsIdDeleteResponse?.status === 404) throw errors.NOT_FOUND();
       throw errors.INTERNAL_SERVER_ERROR();
     }
   });

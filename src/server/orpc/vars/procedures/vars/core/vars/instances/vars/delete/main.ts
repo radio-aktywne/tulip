@@ -15,7 +15,7 @@ export const delete_ = orpcServerRootBase.core.instances.delete
     });
 
     if (instancesEventidStartDeleteData === undefined) {
-      if (instancesEventidStartDeleteResponse.status === 404)
+      if (instancesEventidStartDeleteResponse?.status === 404)
         throw errors.NOT_FOUND();
       throw errors.INTERNAL_SERVER_ERROR();
     }

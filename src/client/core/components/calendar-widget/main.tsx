@@ -1,6 +1,6 @@
 "use client";
 
-import type { SetNonNullableDeep } from "type-fest";
+import type { SetNonNullableDeep, SetRequiredDeep } from "type-fest";
 
 import { msg } from "@lingui/core/macro";
 import { Box, Button, Stack } from "@mantine/core";
@@ -64,9 +64,9 @@ export function CalendarWidget({ date }: CalendarWidgetInput) {
     }),
   );
 
-  const instancesList = instancesListQuery.data as SetNonNullableDeep<
-    typeof instancesListQuery.data,
-    "instances.0.event"
+  const instancesList = instancesListQuery.data as SetRequiredDeep<
+    SetNonNullableDeep<typeof instancesListQuery.data, "instances.0.event">,
+    "instances.0.event.show"
   >;
 
   return (

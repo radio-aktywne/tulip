@@ -22,9 +22,9 @@ export const update = orpcServerRootBase.core.instances.update
     });
 
     if (instancesEventidStartUpdateData === undefined) {
-      if (instancesEventidStartUpdateResponse.status === 404)
+      if (instancesEventidStartUpdateResponse?.status === 404)
         throw errors.NOT_FOUND();
-      if (instancesEventidStartUpdateResponse.status === 409)
+      if (instancesEventidStartUpdateResponse?.status === 409)
         throw errors.CONFLICT();
       throw errors.INTERNAL_SERVER_ERROR();
     }

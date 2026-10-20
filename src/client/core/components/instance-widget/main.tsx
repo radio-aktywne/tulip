@@ -1,6 +1,6 @@
 "use client";
 
-import type { SetNonNullableDeep } from "type-fest";
+import type { SetNonNullableDeep, SetRequiredDeep } from "type-fest";
 
 import { msg } from "@lingui/core/macro";
 import { Button, Stack } from "@mantine/core";
@@ -67,9 +67,9 @@ export function InstanceWidget({ event, start }: InstanceWidgetInput) {
     }),
   );
 
-  const instance = instancesGetQuery.data as SetNonNullableDeep<
-    typeof instancesGetQuery.data,
-    "event"
+  const instance = instancesGetQuery.data as SetRequiredDeep<
+    SetNonNullableDeep<typeof instancesGetQuery.data, "event">,
+    "event.show"
   >;
 
   const handleSave = useCallback(

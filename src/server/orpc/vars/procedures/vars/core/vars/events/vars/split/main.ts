@@ -22,8 +22,8 @@ export const split = orpcServerRootBase.core.events.split
     });
 
     if (eventsIdSplitSplitData === undefined) {
-      if (eventsIdSplitSplitResponse.status === 404) throw errors.NOT_FOUND();
-      if (eventsIdSplitSplitResponse.status === 409) throw errors.CONFLICT();
+      if (eventsIdSplitSplitResponse?.status === 404) throw errors.NOT_FOUND();
+      if (eventsIdSplitSplitResponse?.status === 409) throw errors.CONFLICT();
       throw errors.INTERNAL_SERVER_ERROR();
     }
 

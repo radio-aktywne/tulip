@@ -20,8 +20,8 @@ export const update = orpcServerRootBase.core.shows.update
       });
 
     if (showsIdUpdateData === undefined) {
-      if (showsIdUpdateResponse.status === 404) throw errors.NOT_FOUND();
-      if (showsIdUpdateResponse.status === 409) throw errors.CONFLICT();
+      if (showsIdUpdateResponse?.status === 404) throw errors.NOT_FOUND();
+      if (showsIdUpdateResponse?.status === 409) throw errors.CONFLICT();
       throw errors.INTERNAL_SERVER_ERROR();
     }
 
