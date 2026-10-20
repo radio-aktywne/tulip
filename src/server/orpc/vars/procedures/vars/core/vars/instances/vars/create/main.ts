@@ -19,7 +19,7 @@ export const create = orpcServerRootBase.core.instances.create
       });
 
     if (instancesCreateData === undefined) {
-      if (instancesCreateResponse.status === 409) throw errors.CONFLICT();
+      if (instancesCreateResponse?.status === 409) throw errors.CONFLICT();
       throw errors.INTERNAL_SERVER_ERROR();
     }
 

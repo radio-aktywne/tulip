@@ -17,9 +17,7 @@ export type ShowsWidgetCreateState = {
 };
 
 export type ShowsWidgetState =
-  | ShowsWidgetCreateState
-  | ShowsWidgetDisplayState
-  | ShowsWidgetEditState;
+  ShowsWidgetCreateState | ShowsWidgetDisplayState | ShowsWidgetEditState;
 
 export type ShowsWidgetInput = {
   limit: number;
