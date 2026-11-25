@@ -43,6 +43,10 @@ msgstr "{0, plural, one {week} other {weeks}}"
 msgid "{0, plural, one {year} other {years}}"
 msgstr "{0, plural, one {year} other {years}}"
 
+#: src/isomorphic/identity/components/identity-widget/main.tsx:59
+msgid "Account"
+msgstr "Account"
+
 #: src/client/core/components/event-widget/components/edit-event-form/main.tsx:444
 #: src/client/core/components/new-event-widget/components/create-event-form/main.tsx:447
 msgid "Add instance"
@@ -74,6 +78,10 @@ msgstr "An unexpected error occurred"
 #: src/client/core/components/split-event-widget/components/split-event-form/main.tsx:124
 msgid "Apply"
 msgstr "Apply"
+
+#: src/isomorphic/identity/components/identity-widget/main.tsx:54
+msgid "Apps"
+msgstr "Apps"
 
 #: src/client/core/components/shows-widget/components/create-show-widget/main.tsx:52
 #: src/client/core/components/shows-widget/components/edit-show-widget/main.tsx:59
@@ -264,7 +272,7 @@ msgstr "Invalid input"
 msgid "Live"
 msgstr "Live"
 
-#: src/isomorphic/identity/components/identity-widget/main.tsx:24
+#: src/isomorphic/identity/components/identity-widget/main.tsx:65
 msgid "Logout"
 msgstr "Logout"
 
