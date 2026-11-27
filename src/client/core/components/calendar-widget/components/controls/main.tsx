@@ -1,11 +1,11 @@
 import { msg } from "@lingui/core/macro";
 import { ActionIcon, Group, Text, UnstyledButton } from "@mantine/core";
-import Link from "next/link";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 import type { ControlsInput } from "./types";
 
 import { useLocalization } from "../../../../../../isomorphic/localization/hooks/use-localization";
+import { LocalizedLink } from "../../../../../../isomorphic/routing/components/localized-link";
 
 export function Controls({ date }: ControlsInput) {
   const start = date.local().startOf("week");
@@ -17,7 +17,7 @@ export function Controls({ date }: ControlsInput) {
     <Group justify="space-between" w="100%">
       <ActionIcon
         color="inherit"
-        component={Link}
+        component={LocalizedLink}
         href={{
           pathname: "/",
           query: {
@@ -28,14 +28,14 @@ export function Controls({ date }: ControlsInput) {
       >
         <MdKeyboardArrowLeft size="2em" />
       </ActionIcon>
-      <UnstyledButton component={Link} href="/">
+      <UnstyledButton component={LocalizedLink} href="/">
         <Text fw="bold" size="sm">
           {start.format("LL")} - {end.format("LL")}
         </Text>
       </UnstyledButton>
       <ActionIcon
         color="inherit"
-        component={Link}
+        component={LocalizedLink}
         href={{
           pathname: "/",
           query: {

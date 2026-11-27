@@ -43,6 +43,26 @@ msgstr "{0, plural, one {week} other {weeks}}"
 msgid "{0, plural, one {year} other {years}}"
 msgstr "{0, plural, one {year} other {years}}"
 
+#: src/common/routing/constants.ts:5
+msgid "/"
+msgstr "/"
+
+#: src/common/routing/constants.ts:6
+msgid "/events/[id]"
+msgstr "/events/[id]"
+
+#: src/common/routing/constants.ts:7
+msgid "/events/[id]/split"
+msgstr "/events/[id]/split"
+
+#: src/common/routing/constants.ts:8
+msgid "/events/new"
+msgstr "/events/new"
+
+#: src/common/routing/constants.ts:9
+msgid "/instances/[event]/[start]"
+msgstr "/instances/[event]/[start]"
+
 #: src/isomorphic/identity/components/identity-widget/main.tsx:59
 msgid "Account"
 msgstr "Account"
@@ -71,7 +91,7 @@ msgstr "After"
 #: src/client/core/components/shows-widget/main.tsx:227
 #: src/client/core/components/shows-widget/main.tsx:293
 #: src/client/core/components/split-event-widget/main.tsx:133
-#: src/client/test/components/test-widget/main.tsx:50
+#: src/client/example/components/example-widget/main.tsx:50
 msgid "An unexpected error occurred"
 msgstr "An unexpected error occurred"
 
@@ -88,7 +108,7 @@ msgstr "Apps"
 msgid "Back"
 msgstr "Back"
 
-#: src/app/(root)/layout.tsx:37
+#: src/app/(root)/layout.tsx:39
 msgid "Broadcast shows app 🎭"
 msgstr "Broadcast shows app 🎭"
 
@@ -174,7 +194,7 @@ msgstr "Enter show description"
 msgid "Enter show title"
 msgstr "Enter show title"
 
-#: src/client/test/components/test-widget/components/test-form/main.tsx:30
+#: src/client/example/components/example-widget/components/example-form/main.tsx:34
 msgid "Enter some value"
 msgstr "Enter some value"
 
@@ -260,8 +280,8 @@ msgstr "Instance updated"
 #: src/client/core/components/shows-widget/main.tsx:269
 #: src/client/core/components/split-event-widget/main.tsx:103
 #: src/client/core/components/split-event-widget/main.tsx:154
-#: src/client/test/components/test-widget/main.tsx:39
-#: src/client/test/components/test-widget/main.tsx:60
+#: src/client/example/components/example-widget/main.tsx:39
+#: src/client/example/components/example-widget/main.tsx:60
 msgid "Invalid input"
 msgstr "Invalid input"
 
@@ -471,7 +491,7 @@ msgstr "Split event • tulip"
 msgid "Start"
 msgstr "Start"
 
-#: src/client/test/components/test-widget/components/test-form/main.tsx:36
+#: src/client/example/components/example-widget/components/example-form/main.tsx:40
 msgid "Submit"
 msgstr "Submit"
 
@@ -491,7 +511,7 @@ msgid "Title"
 msgstr "Title"
 
 #: src/app/(root)/(core)/(master)/(detail)/@main/(home)/page.tsx:21
-#: src/app/(root)/layout.tsx:43
+#: src/app/(root)/layout.tsx:45
 msgid "tulip"
 msgstr "tulip"
 
@@ -506,7 +526,7 @@ msgstr "Type"
 msgid "Warning"
 msgstr "Warning"
 
-#: src/server/orpc/vars/procedures/vars/test/vars/validate/main.ts:29
+#: src/server/orpc/vars/procedures/vars/example/vars/validate/main.ts:29
 msgid "Why did the chicken cross the road? To get to the other side."
 msgstr "Why did the chicken cross the road? To get to the other side."
 

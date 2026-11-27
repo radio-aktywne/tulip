@@ -6,7 +6,6 @@ import { msg } from "@lingui/core/macro";
 import { Box, Button, Stack } from "@mantine/core";
 import { Calendar } from "@radio-aktywne/ui";
 import { useQuery } from "@tanstack/react-query";
-import Link from "next/link";
 import { useMemo } from "react";
 
 import type { CalendarWidgetInput } from "./types";
@@ -14,6 +13,7 @@ import type { CalendarWidgetInput } from "./types";
 import { LoadingWidget } from "../../../../common/core/components/generic/loading-widget";
 import { dayjs } from "../../../../common/dates/vars/dayjs";
 import { useLocalization } from "../../../../isomorphic/localization/hooks/use-localization";
+import { LocalizedLink } from "../../../../isomorphic/routing/components/localized-link";
 import { useNow } from "../../../generic/hooks/use-now";
 import { orpcClientSideQueryClient } from "../../../orpc/vars/clients";
 import { Controls } from "./components/controls";
@@ -88,7 +88,7 @@ export function CalendarWidget({ date }: CalendarWidgetInput) {
         )}
       </Box>
       <Button
-        component={Link}
+        component={LocalizedLink}
         fullWidth
         href="/events/new"
         style={{ flexShrink: 0 }}

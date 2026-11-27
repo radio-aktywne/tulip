@@ -3,7 +3,6 @@
 import { msg } from "@lingui/core/macro";
 import { Stack } from "@mantine/core";
 import { useMutation, useSuspenseQuery } from "@tanstack/react-query";
-import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 import { useDeepCompareMemo } from "use-deep-compare";
 
@@ -15,6 +14,7 @@ import { getValidationIssue } from "../../../../common/orpc/lib/get-validation-i
 import { isOrpcDefinedError } from "../../../../common/orpc/lib/is-orpc-defined-error";
 import { useHistory } from "../../../../isomorphic/generic/hooks/use-history";
 import { useNotifications } from "../../../../isomorphic/notifications/hooks/use-notifications";
+import { useLocalizedRouter } from "../../../../isomorphic/routing/hooks/use-localized-router";
 import { orpcClientSideQueryClient } from "../../../orpc/vars/clients";
 import {
   SplitEventForm,
@@ -24,7 +24,7 @@ import {
 export function SplitEventWidget({ at, id }: SplitEventWidgetInput) {
   const [applying, setApplying] = useState(false);
 
-  const router = useRouter();
+  const { router } = useLocalizedRouter();
 
   const { history } = useHistory();
   const { notifications } = useNotifications();

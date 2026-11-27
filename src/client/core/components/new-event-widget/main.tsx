@@ -3,7 +3,6 @@
 import { msg } from "@lingui/core/macro";
 import { Stack } from "@mantine/core";
 import { useMutation } from "@tanstack/react-query";
-import { useRouter } from "next/navigation";
 import { useCallback, useMemo, useState } from "react";
 
 import type { NewEventWidgetInput } from "./types";
@@ -14,6 +13,7 @@ import { getValidationIssue } from "../../../../common/orpc/lib/get-validation-i
 import { isOrpcDefinedError } from "../../../../common/orpc/lib/is-orpc-defined-error";
 import { useHistory } from "../../../../isomorphic/generic/hooks/use-history";
 import { useNotifications } from "../../../../isomorphic/notifications/hooks/use-notifications";
+import { useLocalizedRouter } from "../../../../isomorphic/routing/hooks/use-localized-router";
 import { orpcClientSideQueryClient } from "../../../orpc/vars/clients";
 import {
   CreateEventForm,
@@ -23,7 +23,7 @@ import {
 export function NewEventWidget({}: NewEventWidgetInput) {
   const [creating, setCreating] = useState(false);
 
-  const router = useRouter();
+  const { router } = useLocalizedRouter();
 
   const { history } = useHistory();
   const { notifications } = useNotifications();

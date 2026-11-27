@@ -1,12 +1,12 @@
 import { msg } from "@lingui/core/macro";
 import { Text, UnstyledButton } from "@mantine/core";
 import { CalendarItem } from "@radio-aktywne/ui";
-import Link from "next/link";
 
 import type { InstanceItemInput } from "./types";
 
 import { dayjs } from "../../../../../../common/dates/vars/dayjs";
 import { useLocalization } from "../../../../../../isomorphic/localization/hooks/use-localization";
+import { LocalizedLink } from "../../../../../../isomorphic/routing/components/localized-link";
 import { constants } from "./constants";
 
 export function InstanceItem({ instance, ...input }: InstanceItemInput) {
@@ -14,7 +14,7 @@ export function InstanceItem({ instance, ...input }: InstanceItemInput) {
 
   return (
     <UnstyledButton
-      component={Link}
+      component={LocalizedLink}
       display="contents"
       href={
         !instance.event.recurrence
