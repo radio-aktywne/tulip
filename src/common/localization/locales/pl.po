@@ -43,6 +43,26 @@ msgstr "{0, plural, one {tydzień} few {tygodnie} other {tygodni}}"
 msgid "{0, plural, one {year} other {years}}"
 msgstr "{0, plural, one {rok} few {lata} other {lat}}"
 
+#: src/common/routing/constants.ts:5
+msgid "/"
+msgstr "/"
+
+#: src/common/routing/constants.ts:6
+msgid "/events/[id]"
+msgstr "/emisje/[id]"
+
+#: src/common/routing/constants.ts:7
+msgid "/events/[id]/split"
+msgstr "/emisje/[id]/podziel"
+
+#: src/common/routing/constants.ts:8
+msgid "/events/new"
+msgstr "/emisje/nowa"
+
+#: src/common/routing/constants.ts:9
+msgid "/instances/[event]/[start]"
+msgstr "/terminy/[event]/[start]"
+
 #: src/isomorphic/identity/components/identity-widget/main.tsx:59
 msgid "Account"
 msgstr "Konto"
@@ -71,7 +91,7 @@ msgstr "Po"
 #: src/client/core/components/shows-widget/main.tsx:227
 #: src/client/core/components/shows-widget/main.tsx:293
 #: src/client/core/components/split-event-widget/main.tsx:133
-#: src/client/test/components/test-widget/main.tsx:50
+#: src/client/example/components/example-widget/main.tsx:50
 msgid "An unexpected error occurred"
 msgstr "Wystąpił nieoczekiwany błąd"
 
@@ -88,7 +108,7 @@ msgstr "Aplikacje"
 msgid "Back"
 msgstr "Cofnij"
 
-#: src/app/(root)/layout.tsx:37
+#: src/app/(root)/layout.tsx:39
 msgid "Broadcast shows app 🎭"
 msgstr "Broadcast shows app 🎭"
 
@@ -174,7 +194,7 @@ msgstr "Wprowadź opis audycji"
 msgid "Enter show title"
 msgstr "Wprowadź tytuł audycji"
 
-#: src/client/test/components/test-widget/components/test-form/main.tsx:30
+#: src/client/example/components/example-widget/components/example-form/main.tsx:34
 msgid "Enter some value"
 msgstr "Wprowadź jakąś wartość"
 
@@ -260,8 +280,8 @@ msgstr "Zaktualizowano termin transmisji"
 #: src/client/core/components/shows-widget/main.tsx:269
 #: src/client/core/components/split-event-widget/main.tsx:103
 #: src/client/core/components/split-event-widget/main.tsx:154
-#: src/client/test/components/test-widget/main.tsx:39
-#: src/client/test/components/test-widget/main.tsx:60
+#: src/client/example/components/example-widget/main.tsx:39
+#: src/client/example/components/example-widget/main.tsx:60
 msgid "Invalid input"
 msgstr "Nieprawidłowe dane wejściowe"
 
@@ -471,7 +491,7 @@ msgstr "Podziel emisję • tulip"
 msgid "Start"
 msgstr "Czas rozpoczęcia"
 
-#: src/client/test/components/test-widget/components/test-form/main.tsx:36
+#: src/client/example/components/example-widget/components/example-form/main.tsx:40
 msgid "Submit"
 msgstr "Wyślij"
 
@@ -491,7 +511,7 @@ msgid "Title"
 msgstr "Tytuł"
 
 #: src/app/(root)/(core)/(master)/(detail)/@main/(home)/page.tsx:21
-#: src/app/(root)/layout.tsx:43
+#: src/app/(root)/layout.tsx:45
 msgid "tulip"
 msgstr "tulip"
 
@@ -506,7 +526,7 @@ msgstr "Typ"
 msgid "Warning"
 msgstr "Ostrzeżenie"
 
-#: src/server/orpc/vars/procedures/vars/test/vars/validate/main.ts:29
+#: src/server/orpc/vars/procedures/vars/example/vars/validate/main.ts:29
 msgid "Why did the chicken cross the road? To get to the other side."
 msgstr "Dlaczego kura przeszła przez ulicę? Żeby dostać się na drugą stronę."
 

@@ -3,7 +3,6 @@
 import { msg } from "@lingui/core/macro";
 import { Button, Stack } from "@mantine/core";
 import { useMutation, useSuspenseQuery } from "@tanstack/react-query";
-import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 import { useDeepCompareMemo } from "use-deep-compare";
 
@@ -16,6 +15,7 @@ import { isOrpcDefinedError } from "../../../../common/orpc/lib/is-orpc-defined-
 import { useHistory } from "../../../../isomorphic/generic/hooks/use-history";
 import { useLocalization } from "../../../../isomorphic/localization/hooks/use-localization";
 import { useNotifications } from "../../../../isomorphic/notifications/hooks/use-notifications";
+import { useLocalizedRouter } from "../../../../isomorphic/routing/hooks/use-localized-router";
 import { orpcClientSideQueryClient } from "../../../orpc/vars/clients";
 import {
   EditEventForm,
@@ -26,7 +26,7 @@ export function EventWidget({ id }: EventWidgetInput) {
   const [saving, setSaving] = useState(false);
   const [deleting, setDeleting] = useState(false);
 
-  const router = useRouter();
+  const { router } = useLocalizedRouter();
 
   const { history } = useHistory();
   const { localization } = useLocalization();
